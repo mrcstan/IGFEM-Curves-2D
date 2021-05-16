@@ -22,14 +22,14 @@ path(path, './M_FEM')
 path(path, './mx_FEM')
 path(path, './M_postprocessing')
 path(path, './M_error_analysis')
-path(path, '../NURBS/nurbs_toolbox')
+path(path, '../nurbs_toolbox')
 path(path, './mesh_conforming_abaqus')
 path(path, './mesh')
 path(path, '../SISL/mx_SISL') % for windows
 path(path, './ChannelFiles')
 path(path, './InputFiles')
-path(path, '../Opt-IGFEM-2D/M_optimization')
-path(path, '../MatlabUsefulFunctions/export_fig')
+path(path, '../microchannels-optimizer-2D/M_optimization')
+path(path, './export_fig')
 %path(path, '../../SISL_linux') % for LINUX
 
 totTimer = tic;
