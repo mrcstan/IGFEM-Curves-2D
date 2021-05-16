@@ -1,0 +1,116 @@
+number of channels, 13
+end point number and temperature, 1
+1 27
+model, mean temperature
+mass in, 1, 0.0005
+heat capacity, 3494
+viscosity, 3.405e-06
+density, 1065
+pressure out, 10, 0
+diameters, 13 
+0.00075
+0.00075
+0.00075
+0.00075
+0.00075
+0.00075
+0.00075
+0.00075
+0.00075
+0.00075
+0.00075
+0.00075
+0.00075
+nurbs control points, 1, 2, 2
+0 0.19 
+0.0074848 0.193538 
+nurbs knot vector, 1, 4
+0 0 1 1 
+connectivity, 1
+1 2
+nurbs control points, 2, 2, 2
+0.0074848 0.193538 
+0.0681243 0.147752 
+nurbs knot vector, 2, 4
+0 0 1 1 
+connectivity, 2
+2 3
+nurbs control points, 3, 2, 2
+0.0681243 0.147752 
+0.0389659 0.0869209 
+nurbs knot vector, 3, 4
+0 0 1 1 
+connectivity, 3
+3 5
+nurbs control points, 4, 2, 2
+0.0389659 0.0869209 
+0.0484208 0.0589701 
+nurbs knot vector, 4, 4
+0 0 1 1 
+connectivity, 4
+5 7
+nurbs control points, 5, 2, 3
+0.0074848 0.193538 
+0.119796 0.187894 
+0.0826202 0.129439 
+nurbs knot vector, 5, 5
+0 0 0.5 1 1 
+connectivity, 5
+2 4
+nurbs control points, 6, 2, 2
+0.0681243 0.147752 
+0.0826202 0.129439 
+nurbs knot vector, 6, 4
+0 0 1 1 
+connectivity, 6
+3 4
+nurbs control points, 7, 2, 2
+0.0389659 0.0869209 
+0.109199 0.0995157 
+nurbs knot vector, 7, 4
+0 0 1 1 
+connectivity, 7
+5 6
+nurbs control points, 8, 2, 2
+0.0484208 0.0589701 
+0.0823439 0.0750382 
+nurbs knot vector, 8, 4
+0 0 1 1 
+connectivity, 8
+7 8
+nurbs control points, 9, 2, 3
+0.0484208 0.0589701 
+0.0216278 0.0113999 
+0.131009 0.0282509 
+nurbs knot vector, 9, 5
+0 0 0.5 1 1 
+connectivity, 9
+7 9
+nurbs control points, 10, 2, 2
+0.0826202 0.129439 
+0.109199 0.0995157 
+nurbs knot vector, 10, 4
+0 0 1 1 
+connectivity, 10
+4 6
+nurbs control points, 11, 2, 2
+0.109199 0.0995157 
+0.0823439 0.0750382 
+nurbs knot vector, 11, 4
+0 0 1 1 
+connectivity, 11
+6 8
+nurbs control points, 12, 2, 2
+0.0823439 0.0750382 
+0.131009 0.0282509 
+nurbs knot vector, 12, 4
+0 0 1 1 
+connectivity, 12
+8 9
+nurbs control points, 13, 2, 2
+0.131009 0.0282509 
+0.15 0.01 
+nurbs knot vector, 13, 4
+0 0 1 1 
+connectivity, 13
+9 10

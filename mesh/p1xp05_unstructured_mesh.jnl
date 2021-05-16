@@ -1,0 +1,163 @@
+# -*- coding: mbcs -*-
+from abaqus import *
+upgradeMdb(
+    'C:/Users/marcustan/Dropbox/IGFEM-Curves/ConformingMeshAbaqus/Conform_temp_all_semicircle_ro_p041_6_10-6.10-1.cae'
+    , 
+    'C:/Users/marcustan/Dropbox/IGFEM-Curves/ConformingMeshAbaqus/Conform_temp_all_semicircle_ro_p041_6_10.cae')
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['Model-1'].parts['Part-1'].deleteMesh()
+mdb.models['Model-1'].parts['Part-1'].seedPart(deviationFactor=0.1, 
+    minSizeFactor=0.1, size=0.01)
+mdb.models['Model-1'].parts['Part-1'].generateMesh()
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.jobs.changeKey(fromName='temp_all_semicircle_ro_p041_40k_elems', toName=
+    'temp_all_semicircle_ro_p041_112_elems')
+mdb.models['Model-1'].parts['Part-1'].deleteMesh()
+mdb.models['Model-1'].parts['Part-1'].seedPart(deviationFactor=0.1, 
+    minSizeFactor=0.1, size=0.005)
+mdb.models['Model-1'].parts['Part-1'].generateMesh()
+mdb.jobs.changeKey(fromName='temp_all_semicircle_ro_p041_112_elems', toName=
+    'temp_all_semicircle_ro_p041_460_elems')
+mdb.models['Model-1'].parts['Part-1'].deleteMesh()
+mdb.models['Model-1'].parts['Part-1'].seedPart(deviationFactor=0.1, 
+    minSizeFactor=0.1, size=0.0025)
+mdb.models['Model-1'].parts['Part-1'].generateMesh()
+mdb.jobs.changeKey(fromName='temp_all_semicircle_ro_p041_460_elems', toName=
+    'temp_all_semicircle_ro_p041_1887_elems')
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['Model-1'].parts['Part-1'].deleteMesh()
+mdb.models['Model-1'].parts['Part-1'].seedPart(deviationFactor=0.1, 
+    minSizeFactor=0.1, size=0.00125)
+mdb.models['Model-1'].parts['Part-1'].generateMesh()
+mdb.jobs.changeKey(fromName='temp_all_semicircle_ro_p041_1887_elems', toName=
+    'temp_all_semicircle_ro_p041_6704_elems')
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+del mdb.models['Model-1'].sketches['semicircle_ro_p041']
+mdb.models['Model-1'].parts['Part-1'].deleteMesh()
+mdb.models['Model-1'].Part(name='Part-1-failed', objectToCopy=
+    mdb.models['Model-1'].parts['Part-1'])
+mdb.models['Model-1'].parts['Part-1-failed'].Unlock(reportWarnings=False)
+del mdb.models['Model-1'].parts['Part-1']
+mdb.models['Model-1'].parts.changeKey(fromName='Part-1-failed', toName=
+    'Part-1')
+mdb.models['Model-1'].rootAssembly.regenerate()
+#* FeatureError: The assembly is locked and cannot be regenerated.
+del mdb.models['Model-1'].parts['Part-1'].features['Partition face-1']
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['Model-1'].parts['Part-1'].deleteSets(setNames=('BOTTOM', 'LEFT', 
+    'RIGHT', 'TOP'))
+mdb.models['Model-1'].parts['Part-1'].Set(edges=
+    mdb.models['Model-1'].parts['Part-1'].edges.getSequenceFromMask(('[#f ]', 
+    ), ), name='OUTER')
+mdb.models['Model-1'].boundaryConditions.delete(('BOTTOM', 'LEFT', 'RIGHT', 
+    'TOP'))
+mdb.models['Model-1'].parts['Part-1'].deleteSets(setNames=('REGION2', 
+    'REGION1'))
+# Save by marcustan on 2013_11_18-14.45.00; build 6.13-2 2013_07_18-06.22.41 126428
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['Model-1'].parts['Part-1'].seedPart(deviationFactor=0.1, 
+    minSizeFactor=0.1, size=0.01)
+mdb.models['Model-1'].parts['Part-1'].setMeshControls(allowMapped=False, 
+    elemShape=TRI, regions=
+    mdb.models['Model-1'].parts['Part-1'].faces.getSequenceFromMask(('[#1 ]', 
+    ), ))
+mdb.models['Model-1'].parts['Part-1'].generateMesh()
+mdb.jobs.changeKey(fromName='temp_all_semicircle_ro_p041_6704_elems', toName=
+    'temp_all_unstructured_114_elems')
+mdb.models['Model-1'].parts['Part-1'].deleteMesh()
+mdb.models['Model-1'].parts['Part-1'].seedPart(deviationFactor=0.1, 
+    minSizeFactor=0.1, size=0.005)
+mdb.models['Model-1'].parts['Part-1'].generateMesh()
+mdb.jobs.changeKey(fromName='temp_all_unstructured_114_elems', toName=
+    'temp_all_unstructured_442_elems')
+mdb.models['Model-1'].parts['Part-1'].deleteMesh()
+mdb.models['Model-1'].parts['Part-1'].seedPart(deviationFactor=0.1, 
+    minSizeFactor=0.1, size=0.025)
+mdb.models['Model-1'].parts['Part-1'].generateMesh()
+mdb.jobs.changeKey(fromName='temp_all_unstructured_442_elems', toName=
+    'temp_all_unstructured_16_elems')
+mdb.models['Model-1'].parts['Part-1'].deleteMesh()
+mdb.models['Model-1'].parts['Part-1'].seedPart(deviationFactor=0.1, 
+    minSizeFactor=0.1, size=0.0025)
+mdb.models['Model-1'].parts['Part-1'].generateMesh()
+mdb.jobs.changeKey(fromName='temp_all_unstructured_16_elems', toName=
+    'temp_all_unstructured_1832_elems')
+mdb.models['Model-1'].parts['Part-1'].deleteMesh()
+mdb.models['Model-1'].parts['Part-1'].seedPart(deviationFactor=0.1, 
+    minSizeFactor=0.1, size=0.00125)
+mdb.models['Model-1'].parts['Part-1'].generateMesh()
+mdb.jobs.changeKey(fromName='temp_all_unstructured_1832_elems', toName=
+    'temp_all_unstructured_6608_elems')
+# Save by marcustan on 2013_11_18-15.09.23; build 6.13-2 2013_07_18-06.22.41 126428

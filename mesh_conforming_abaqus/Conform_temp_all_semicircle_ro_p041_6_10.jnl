@@ -1,0 +1,7 @@
+# Save by marcustan on 2013_11_15-14.41.41; build 6.13-2 2013_07_18-06.22.41 126428
+from abaqus import *
+upgradeMdb(
+    'C:/Users/marcustan/Dropbox/IGFEM-Curves/ConformingMeshAbaqus/Conform_temp_all_semicircle_ro_p041_6_10-6.10-1.cae'
+    , 
+    'C:/Users/marcustan/Dropbox/IGFEM-Curves/ConformingMeshAbaqus/Conform_temp_all_semicircle_ro_p041_6_10.cae')
+# Save by marcustan on 2013_11_15-14.41.41; build 6.13-2 2013_07_18-06.22.41 126428

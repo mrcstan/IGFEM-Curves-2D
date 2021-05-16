@@ -1,0 +1,133 @@
+*HEADING
+ABAQUS job created on 25-Oct-12 at 19:21:26
+** seed size = 0.0055
+*#node, 233
+*#element, 410
+**
+*NODE
+     1, 0.0299999993,           0.
+      2, 0.0700000003,           0.
+      3,  0.100000001,           0.
+      4,  0.100000001, 0.0500000007
+      5,           0., 0.0500000007
+      6,           0.,           0.
+      7, 0.0358578637, 0.0141421361
+      8, 0.0500000007, 0.0199999996
+      9, 0.0641421378, 0.0141421361
+     10,  0.100000001, 0.0250000004
+     11,  0.075000003, 0.0500000007
+     12, 0.0500000007, 0.0500000007
+     13, 0.0250000004, 0.0500000007
+     14,           0., 0.0250000004
+     15, 0.0500000007,           0.
+     16, 0.0363816954, 0.0308110416
+     17, 0.0674745589, 0.0309130158
+     18, 0.0810556486,  0.017407557
+     19, 0.0212065931, 0.0199921969
+     20, 0.0847060457, 0.0346641131
+**
+*ELEMENT, TYPE=DS3 , ELSET=MATERIAL1_PROPERTIES
+ 1, 19,  1,  7
+ 2, 19, 16, 13
+ 3, 16,  8, 12
+ 4, 20, 17, 18
+ 5, 20, 18, 10
+ 6, 18,  3, 10
+ 7, 17,  8,  9
+ 8, 20,  4, 11
+ 9, 14, 13,  5
+10, 16, 12, 13
+11, 17, 11, 12
+12, 19, 14,  6
+13, 19, 13, 14
+14, 16,  7,  8
+15, 17, 12,  8
+16, 18, 17,  9
+17, 18,  9,  2
+18, 18,  2,  3
+19, 19,  6,  1
+20, 19,  7, 16
+21, 20, 10,  4
+22, 20, 11, 17
+23,  1, 15,  7
+24, 15,  2,  9
+25, 15,  9,  8
+26, 15,  8,  7
+**
+** Material1_Properties
+**
+*SHELL SECTION, ELSET=MATERIAL1_PROPERTIES, MATERIAL=MATERIAL1
+       0.001,       5
+**
+** Material1
+** Date: 25-Oct-12           Time: 18:13:37
+**
+*MATERIAL, NAME=MATERIAL1
+**
+*DENSITY
+       7860.,
+**
+*CONDUCTIVITY, TYPE=ISO
+         1.0,
+**
+*SPECIFIC HEAT
+        450.,
+**
+** Step  1, Default Heat Transfer Step
+** LoadCase, Default
+**
+*STEP, AMPLITUDE=RAMP, INC=10
+Steady State Heat Transfer
+**
+This load case is the default load case that always appears
+*HEAT TRANSFER, STEADY STATE
+         0.1,          1.
+**
+*NSET, NSET=OUT_BOUND
+  1,  2,  3,  4,  5,  6, 10, 11, 12, 13, 14, 15
+*ELSET, ELSET=HEATSOURCE1, GENERATE
+       1,     26,       1
+*ELSET, ELSET=REGION1, GENERATE
+  1,  22,   1
+*ELSET, ELSET=REGION2, GENERATE
+ 23,  26,   1
+**
+** Top_Temperature
+**
+*BOUNDARY, OP=NEW
+OUT_BOUND, 11, 11, 	  20.
+**
+** HeatSource1
+**
+*DFLUX, OP=NEW
+HEATSOURCE1, BF,         0.
+**
+*FILM, OP=NEW
+*CFLUX, OP=NEW
+**
+*NODE PRINT, FREQ=1
+NT,
+**
+*EL PRINT, POS=INTEG, FREQ=0
+**
+*EL PRINT, POS=NODES, FREQ=0
+**
+*EL PRINT, POS=CENTR, FREQ=0
+**
+*EL PRINT, POS=AVERAGE, FREQ=0
+**
+*MODAL PRINT, FREQ=99999
+**
+*PRINT, FREQ=1
+** NODE OUTPUT REQUESTS
+**
+*OUTPUT, FIELD, FREQ=1
+*NODE OUTPUT
+NT,
+**
+** ELEMENT OUTPUT REQUESTS
+** NONE
+** MODAL OUTPUT REQUESTS
+** NONE
+**
+*END STEP

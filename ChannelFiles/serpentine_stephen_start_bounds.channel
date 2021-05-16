@@ -1,0 +1,110 @@
+number of channels, 1
+end point number and temperature, 1
+1 27
+model, mean temperature
+mass in, 1, 0.0005
+heat capacity, 3494
+viscosity, 2.9617e-06
+density, 1065
+pressure out, 2, 0
+cross section, square 
+diameters, 1 
+0.00075
+nurbs control points, 1, 2, 20
+0 0.189 
+0.011 0.189 
+0.139 0.189 
+0.139 0.16675 
+0.011 0.16675 
+0.011 0.1445 
+0.139 0.1445 
+0.139 0.12225 
+0.011 0.12225 
+0.011 0.1 
+0.139 0.1 
+0.139 0.07775 
+0.011 0.07775 
+0.011 0.0555 
+0.139 0.0555 
+0.139 0.03325 
+0.011 0.03325 
+0.011 0.011 
+0.139 0.011 
+0.15 0.011 
+nurbs knot vector, 1, 22
+0 0 0.0526316 0.105263 0.157895 0.210526 0.263158 0.315789 0.368421 0.421053 0.473684 0.526316 0.578947 0.631579 0.684211 0.736842 0.789474 0.842105 0.894737 0.947368 1 1 
+connectivity, 1
+1 2
+number of design variables, 36 
+design, 1 
+channel, 1, cpt, 2, x, 0.005, 0.07 
+design, 2 
+channel, 1, cpt, 2, y, 0.18, 0.195 
+design, 3 
+channel, 1, cpt, 3, x, 0.08, 0.145  
+design, 4 
+channel, 1, cpt, 3, y, 0.18, 0.195  
+design, 5 
+channel, 1, cpt, 5, x, 0.005, 0.07 
+design, 6 
+channel, 1, cpt, 5, y, 0.155, 0.175 
+design, 7 
+channel, 1, cpt, 4, x, 0.08, 0.145 
+design, 8 
+channel, 1, cpt, 4, y, 0.155, 0.175  
+design, 9 
+channel, 1, cpt, 6, x,  0.005, 0.07 
+design, 10 
+channel, 1, cpt, 6, y, 0.135, 0.15  
+design, 11 
+channel, 1, cpt, 7, x, 0.08, 0.145 
+design, 12 
+channel, 1, cpt, 7, y, 0.135, 0.15 
+design, 13 
+channel, 1, cpt, 9, x, 0.005, 0.07
+design, 14 
+channel, 1, cpt, 9, y, 0.115, 0.13 
+design, 15 
+channel, 1, cpt, 8, x, 0.08, 0.145  
+design, 16 
+channel, 1, cpt, 8, y, 0.115, 0.13 
+design, 17 
+channel, 1, cpt, 10, x,  0.005, 0.07 
+design, 18 
+channel, 1, cpt, 10, y,  0.092, 0.11 
+design, 19 
+channel, 1, cpt, 11, x, 0.08, 0.145 
+design, 20 
+channel, 1, cpt, 11, y, 0.092, 0.11  
+design, 21 
+channel, 1, cpt, 13, x, 0.005, 0.07  
+design, 22 
+channel, 1, cpt, 13, y, 0.07, 0.088 
+design, 23 
+channel, 1, cpt, 12, x, 0.08, 0.145 
+design, 24 
+channel, 1, cpt, 12, y, 0.07, 0.088  
+design, 25 
+channel, 1, cpt, 14, x, 0.005, 0.07 
+design, 26 
+channel, 1, cpt, 14, y, 0.048, 0.065 
+design, 27 
+channel, 1, cpt, 15, x, 0.08, 0.145
+design, 28 
+channel, 1, cpt, 15, y, 0.048, 0.065 
+design, 29 
+channel, 1, cpt, 17, x, 0.005, 0.07 
+design, 30 
+channel, 1, cpt, 17, y, 0.025, 0.042  
+design, 31 
+channel, 1, cpt, 16, x, 0.08, 0.145 
+design, 32 
+channel, 1, cpt, 16, y, 0.025, 0.042
+design, 33 
+channel, 1, cpt, 18, x, 0.005, 0.07 
+design, 34 
+channel, 1, cpt, 18, y, 0.005, 0.02 
+design, 35 
+channel, 1, cpt, 19, x, 0.08, 0.145 
+design, 36 
+channel, 1, cpt, 19, y, 0.005, 0.02  

@@ -1,0 +1,158 @@
+number of channels, 13
+end point number and temperature, 1
+1 27
+model, mean temperature
+mass in, 1, 0.0005
+heat capacity, 3494
+viscosity, 3.405e-06
+density, 1065
+pressure out, 10, 0
+cross section, square 
+diameters, 13 
+0.00075
+0.00075
+0.00075
+0.00075
+0.00075
+0.00075
+0.00075
+0.00075
+0.00075
+0.00075
+0.00075
+0.00075
+0.00075
+nurbs control points, 1, 2, 2
+0 0.19 
+0.105492 0.181551 
+nurbs knot vector, 1, 4
+0 0 1 1 
+connectivity, 1
+1 2
+nurbs control points, 2, 2, 2
+0.105492 0.181551 
+0.0805602 0.179287 
+nurbs knot vector, 2, 4
+0 0 1 1 
+connectivity, 2
+2 3
+nurbs control points, 3, 2, 2
+0.0805602 0.179287 
+0.0520647 0.178134 
+nurbs knot vector, 3, 4
+0 0 1 1 
+connectivity, 3
+3 5
+nurbs control points, 4, 2, 2
+0.0520647 0.178134 
+0.0182782 0.174855 
+nurbs knot vector, 4, 4
+0 0 1 1 
+connectivity, 4
+5 7
+nurbs control points, 5, 2, 3
+0.105492 0.181551 
+0.135173 0.194726 
+0.13372 0.0303876 
+nurbs knot vector, 5, 5
+0 0 0.5 1 1 
+connectivity, 5
+2 4
+nurbs control points, 6, 2, 2
+0.0805602 0.179287 
+0.13372 0.0303876 
+nurbs knot vector, 6, 4
+0 0 1 1 
+connectivity, 6
+3 4
+nurbs control points, 7, 2, 2
+0.0520647 0.178134 
+0.0958109 0.0267109 
+nurbs knot vector, 7, 4
+0 0 1 1 
+connectivity, 7
+5 6
+nurbs control points, 8, 2, 2
+0.0182782 0.174855 
+0.0611528 0.025604 
+nurbs knot vector, 8, 4
+0 0 1 1 
+connectivity, 8
+7 8
+nurbs control points, 9, 2, 3
+0.0182782 0.174855 
+0.0134326 0.00546483 
+0.0402612 0.0128509 
+nurbs knot vector, 9, 5
+0 0 0.5 1 1 
+connectivity, 9
+7 9
+nurbs control points, 10, 2, 2
+0.13372 0.0303876 
+0.0958109 0.0267109 
+nurbs knot vector, 10, 4
+0 0 1 1 
+connectivity, 10
+4 6
+nurbs control points, 11, 2, 2
+0.0958109 0.0267109 
+0.0611528 0.025604 
+nurbs knot vector, 11, 4
+0 0 1 1 
+connectivity, 11
+6 8
+nurbs control points, 12, 2, 2
+0.0611528 0.025604 
+0.0402612 0.0128509 
+nurbs knot vector, 12, 4
+0 0 1 1 
+connectivity, 12
+8 9
+nurbs control points, 13, 2, 2
+0.0402612 0.0128509 
+0.15 0.01 
+nurbs knot vector, 13, 4
+0 0 1 1 
+connectivity, 13
+9 10
+number of design variables, 20 
+design, 1 
+channel, 2, cpt, 1, x, 0.005, 0.145 
+design, 2 
+channel, 2, cpt, 1, y, 0.005, 0.195 
+design, 3 
+channel, 5, cpt, 2, x, 0.005, 0.145 
+design, 4 
+channel, 5, cpt, 2, y, 0.005, 0.195 
+design, 5 
+channel, 3, cpt, 1, x, 0.005, 0.145 
+design, 6 
+channel, 3, cpt, 1, y, 0.005, 0.195 
+design, 7 
+channel, 10, cpt, 1, x, 0.005, 0.145 
+design, 8 
+channel, 10, cpt, 1, y, 0.005, 0.195 
+design, 9 
+channel, 4, cpt, 1, x, 0.005, 0.145 
+design, 10 
+channel, 4, cpt, 1, y, 0.005, 0.195 
+design, 11 
+channel, 11, cpt, 1, x, 0.005, 0.145 
+design, 12 
+channel, 11, cpt, 1, y, 0.005, 0.195 
+design, 13 
+channel, 8, cpt, 1, x, 0.005, 0.145 
+design, 14 
+channel, 8, cpt, 1, y, 0.005, 0.195 
+design, 15 
+channel, 12, cpt, 1, x, 0.005, 0.145 
+design, 16 
+channel, 12, cpt, 1, y, 0.005, 0.195 
+design, 17 
+channel, 9, cpt, 2, x, 0.005, 0.145 
+design, 18 
+channel, 9, cpt, 2, y, 0.005, 0.195 
+design, 19 
+channel, 13, cpt, 1, x, 0.005, 0.145 
+design, 20 
+channel, 13, cpt, 1, y, 0.005, 0.195 

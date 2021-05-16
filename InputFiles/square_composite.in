@@ -1,0 +1,86 @@
+# if meshFile = NA, use built in mesh generator
+# otherwise, assume it is an Abaqus mesh file
+mesh_file, NA
+# domain_bounds, xi xf yi yf
+domain_bounds, 0 0.075 0 0.075
+# mesh_sizes, nx ny nz (options.meshSizes would take precedence over these)
+mesh_sizes, 60 60
+# mesh_orientation (see read_inputs.m)
+mesh_orientation, 2
+# material conductivity
+conductivity, 2.7
+thickness, 0.003
+# heat source 
+heat_source, 6000
+# convection_coefficient, 13.6
+convection_coefficient, 0.0
+ambient_temperature, 21.0
+# boundary conditions (see read_input.m)
+BC_boundaries, insulated
+BC_types, insulated
+BC_values, insulated
+# tolerance for NURBS parameters
+tol_nurbs_parameter, 1e-6
+# computational tolerance for curve_edge_intersect
+tol_computational, 1e-15
+# geometrical tolerance for curve_edge_intersect
+tol_geometrical, 1e-5
+# half-width fraction of channel
+tol_half_line_width_fraction, 1e-4
+# tolerance for intersect_edges in single_edge_curves_intersect.m
+tol_intersect_edges, 1e-10
+# min angle of the resulting elements after edge flipping
+tol_edge_flip_angle, 20
+# max positive angle wrt horizontal axis beyond which a line
+# is considered vertical
+tol_vertical_angle, 89.9
+# tolerance for eliminating child elements with collinear points
+tol_collinear, 1e-10
+# min angle of a triangular child element below which NURBS is approximated by line segments
+tol_slender_min_angle, 5
+# max aspect ratio of a quadrialteral child element below which NURBS is approximated by line segments
+tol_slender_max_aspect_ratio, inf 
+# tolerance for checking if original nodes coincide with channels
+tol_node, 1e-6
+# tolerance for determining whether nodes lie on domain boundaries
+tol_boundary, 1e-13
+# tolerance for determining if channels self-intersect
+tol_self_intersect, 1e-10
+# barycentric coordinate tolerance for finding branching points and kinks
+tol_barycentric, 1e-10
+# maximum number of refinements
+refine_max_levels, 5
+# force refinement of elements containing branching points
+refine_branch_elem, false
+# distance to move node when it coincides with channel
+# or when a branching point or kink coincides
+# with an element edge, as a fraction of the
+# minimum edge length
+move_node_dist_frac, 0.05
+# number of attempts to move node
+move_node_max_attempts, 10
+# randomize directions in which the nodes are moved
+move_node_rand_direction, true
+# gauss quadrature for line integration in regular, poly and NURBS IGFEM
+gauss_line_num_pts, 4
+# gauss quadrature for regular elements
+gauss_regular_elem_num_pts, 7
+# number of gauss points per knot span along channel for NURBS IGFEM 
+gauss_along_channel, 4
+# number of gauss points per knot span normal to channel for NURBS IGFEM
+gauss_normal_to_channel, 4
+# number of gauss points in one direction for quad child element in polynomial IGFEM (disabled)
+gauss_quad_each_direction, 4
+# other flags
+is_conforming_mesh, false
+calculate_intersection_velocities, true
+apply_supg, true
+perform_FEM, true
+# performs polynomial IGFEM instead of NURBS IGFEM
+polynomial_IGFEM, true
+# output vtk file name without extension (options.outfile takes precedences over this)
+vtk_file_name, test
+# output vtk scalar name
+vtk_scalar_name, T_C
+# postprocess in MATLAB
+postprocess, false

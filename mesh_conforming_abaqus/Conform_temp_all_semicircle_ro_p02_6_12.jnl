@@ -1,0 +1,681 @@
+# -*- coding: mbcs -*-
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.openIges('C:/Users/marcustan/Dropbox/IGFEM-Curves/TestIGES_nurbs.igs', 
+    msbo=0, scaleFromFile=OFF, topology=WIRE, trimCurve=DEFAULT, uniteWires=
+    OFF)
+mdb.models['Model-1'].ConstrainedSketchFromGeometryFile(geometryFile=mdb.acis, 
+    name='TestIGES_nurbs', scale=1.0)
+mdb.openIges('C:/Users/marcustan/Dropbox/IGFEM-Curves/TestIGES_nurbs.igs', 
+    msbo=False, scaleFromFile=OFF, trimCurve=DEFAULT)
+mdb.models['Model-1'].PartFromGeometryFile(combine=False, convertToAnalytical=1
+    , dimensionality=THREE_D, geometryFile=mdb.acis, name='TestIGES_nurbs', 
+    stitchEdges=1, stitchTolerance=1.0, type=DEFORMABLE_BODY)
+del mdb.models['Model-1'].parts['TestIGES_nurbs']
+mdb.openIges('C:/Users/marcustan/Dropbox/IGFEM-Curves/TestIGES_nurbs2.igs', 
+    msbo=0, scaleFromFile=OFF, topology=WIRE, trimCurve=DEFAULT, uniteWires=
+    OFF)
+mdb.models['Model-1'].ConstrainedSketchFromGeometryFile(geometryFile=mdb.acis, 
+    name='TestIGES_nurbs2', scale=1.0)
+mdb.models['Model-1'].ConstrainedSketch(name='__edit__', objectToCopy=
+    mdb.models['Model-1'].sketches['TestIGES_nurbs2'])
+del mdb.models['Model-1'].sketches['__edit__']
+del mdb.models['Model-1'].sketches['TestIGES_nurbs']
+mdb.models['Model-1'].ConstrainedSketch(name='__edit__', objectToCopy=
+    mdb.models['Model-1'].sketches['TestIGES_nurbs2'])
+del mdb.models['Model-1'].sketches['__edit__']
+mdb.models['Model-1'].ConstrainedSketch(name='__profile__', sheetSize=2.0)
+mdb.models['Model-1'].sketches['__profile__'].rectangle(point1=(0.0, 0.0), 
+    point2=(0.1, 0.05))
+mdb.models['Model-1'].Part(dimensionality=TWO_D_PLANAR, name='Part-1', type=
+    DEFORMABLE_BODY)
+mdb.models['Model-1'].parts['Part-1'].BaseShell(sketch=
+    mdb.models['Model-1'].sketches['__profile__'])
+del mdb.models['Model-1'].sketches['__profile__']
+mdb.models['Model-1'].ConstrainedSketch(gridSpacing=0.005, name='__profile__', 
+    sheetSize=0.223, transform=
+    mdb.models['Model-1'].parts['Part-1'].MakeSketchTransform(
+    sketchPlane=mdb.models['Model-1'].parts['Part-1'].faces[0], 
+    sketchPlaneSide=SIDE1, sketchOrientation=RIGHT, origin=(0.05, 0.025, 0.0)))
+mdb.models['Model-1'].sketches['__profile__'].sketchOptions.setValues(
+    decimalPlaces=3)
+mdb.models['Model-1'].parts['Part-1'].projectReferencesOntoSketch(filter=
+    COPLANAR_EDGES, sketch=mdb.models['Model-1'].sketches['__profile__'])
+mdb.models['Model-1'].sketches['__profile__'].retrieveSketch(sketch=
+    mdb.models['Model-1'].sketches['TestIGES_nurbs2'])
+del mdb.models['Model-1'].sketches['__profile__']
+mdb.models['Model-1'].ConstrainedSketch(gridSpacing=0.005, name='__profile__', 
+    sheetSize=0.223, transform=
+    mdb.models['Model-1'].parts['Part-1'].MakeSketchTransform(
+    sketchPlane=mdb.models['Model-1'].parts['Part-1'].faces[0], 
+    sketchPlaneSide=SIDE1, sketchOrientation=RIGHT, origin=(0.05, 0.025, 0.0)))
+mdb.models['Model-1'].sketches['__profile__'].sketchOptions.setValues(
+    decimalPlaces=3)
+mdb.models['Model-1'].parts['Part-1'].projectReferencesOntoSketch(filter=
+    COPLANAR_EDGES, sketch=mdb.models['Model-1'].sketches['__profile__'])
+mdb.models['Model-1'].sketches['__profile__'].retrieveSketch(sketch=
+    mdb.models['Model-1'].sketches['TestIGES_nurbs2'])
+mdb.models['Model-1'].sketches['__profile__'].move(objectList=(
+    mdb.models['Model-1'].sketches['__profile__'].geometry[8], ), vector=(
+    -0.05, -0.05))
+del mdb.models['Model-1'].sketches['__profile__']
+mdb.models['Model-1'].ConstrainedSketch(gridSpacing=0.005, name='__profile__', 
+    sheetSize=0.223, transform=
+    mdb.models['Model-1'].parts['Part-1'].MakeSketchTransform(
+    sketchPlane=mdb.models['Model-1'].parts['Part-1'].faces[0], 
+    sketchPlaneSide=SIDE1, sketchOrientation=RIGHT, origin=(0.05, 0.025, 0.0)))
+mdb.models['Model-1'].sketches['__profile__'].sketchOptions.setValues(
+    decimalPlaces=3)
+mdb.models['Model-1'].parts['Part-1'].projectReferencesOntoSketch(filter=
+    COPLANAR_EDGES, sketch=mdb.models['Model-1'].sketches['__profile__'])
+mdb.models['Model-1'].sketches['__profile__'].retrieveSketch(sketch=
+    mdb.models['Model-1'].sketches['TestIGES_nurbs2'])
+mdb.models['Model-1'].sketches['__profile__'].move(objectList=(
+    mdb.models['Model-1'].sketches['__profile__'].geometry[8], ), vector=(
+    -0.05, -0.025))
+mdb.models['Model-1'].parts['Part-1'].PartitionFaceBySketch(faces=
+    mdb.models['Model-1'].parts['Part-1'].faces.getSequenceFromMask(('[#1 ]', 
+    ), ), sketch=mdb.models['Model-1'].sketches['__profile__'])
+del mdb.models['Model-1'].sketches['__profile__']
+mdb.models['Model-1'].ConstrainedSketch(gridSpacing=0.005, name='__profile__', 
+    sheetSize=0.223, transform=
+    mdb.models['Model-1'].parts['Part-1'].MakeSketchTransform(
+    sketchPlane=mdb.models['Model-1'].parts['Part-1'].faces[0], 
+    sketchPlaneSide=SIDE1, sketchOrientation=RIGHT, origin=(0.058388, 0.019025, 
+    0.0)))
+mdb.models['Model-1'].sketches['__profile__'].sketchOptions.setValues(
+    decimalPlaces=3)
+mdb.models['Model-1'].parts['Part-1'].projectReferencesOntoSketch(filter=
+    COPLANAR_EDGES, sketch=mdb.models['Model-1'].sketches['__profile__'])
+del mdb.models['Model-1'].sketches['__profile__']
+mdb.models['Model-1'].ConstrainedSketch(name='__edit__', objectToCopy=
+    mdb.models['Model-1'].parts['Part-1'].features['Partition face-1'].sketch)
+mdb.models['Model-1'].parts['Part-1'].projectReferencesOntoSketch(filter=
+    COPLANAR_EDGES, sketch=mdb.models['Model-1'].sketches['__edit__'], 
+    upToFeature=
+    mdb.models['Model-1'].parts['Part-1'].features['Partition face-1'])
+del mdb.models['Model-1'].sketches['__edit__']
+mdb.models['Model-1'].sketches.changeKey(fromName='TestIGES_nurbs2', toName=
+    'WavyInterfaceVHighAmp')
+mdb.models['Model-1'].parts['Part-1'].setMeshControls(elemShape=TRI, regions=
+    mdb.models['Model-1'].parts['Part-1'].faces.getSequenceFromMask(('[#3 ]', 
+    ), ))
+mdb.models['Model-1'].parts['Part-1'].seedEdgeBySize(constraint=FINER, 
+    deviationFactor=0.1, edges=
+    mdb.models['Model-1'].parts['Part-1'].edges.getSequenceFromMask(('[#1 ]', 
+    ), ), size=0.0141)
+mdb.models['Model-1'].parts['Part-1'].seedPart(deviationFactor=0.1, 
+    minSizeFactor=0.1, size=0.0141)
+mdb.models['Model-1'].parts['Part-1'].generateMesh()
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['Model-1'].Material(name='Material-1')
+mdb.models['Model-1'].materials['Material-1'].Conductivity(table=((0.6, ), ))
+mdb.models['Model-1'].HomogeneousSolidSection(material='Material-1', name=
+    'Section-1', thickness=None)
+mdb.models['Model-1'].rootAssembly.DatumCsysByDefault(CARTESIAN)
+mdb.models['Model-1'].rootAssembly.Instance(dependent=ON, name='Part-1-1', 
+    part=mdb.models['Model-1'].parts['Part-1'])
+mdb.models['Model-1'].HeatTransferStep(deltmx=0.1, name='Thermal', previous=
+    'Initial')
+mdb.models['Model-1'].parts['Part-1'].deleteMesh()
+mdb.models['Model-1'].parts['Part-1'].setElementType(elemTypes=(ElemType(
+    elemCode=DC2D4, elemLibrary=STANDARD), ElemType(elemCode=DC2D3, 
+    elemLibrary=STANDARD)), regions=(
+    mdb.models['Model-1'].parts['Part-1'].faces.getSequenceFromMask(('[#3 ]', 
+    ), ), ))
+mdb.models['Model-1'].parts['Part-1'].generateMesh()
+mdb.models['Model-1'].rootAssembly.regenerate()
+mdb.models['Model-1'].rootAssembly.Set(faces=
+    mdb.models['Model-1'].rootAssembly.instances['Part-1-1'].faces.getSequenceFromMask(
+    ('[#2 ]', ), ), name='Set-1')
+mdb.models['Model-1'].TemperatureBC(amplitude=UNSET, createStepName='Thermal', 
+    distributionType=UNIFORM, fieldName='', fixed=OFF, magnitude=20.0, name=
+    'BC-1', region=mdb.models['Model-1'].rootAssembly.sets['Set-1'])
+del mdb.models['Model-1'].boundaryConditions['BC-1']
+mdb.models['Model-1'].TemperatureBC(amplitude=UNSET, createStepName='Thermal', 
+    distributionType=UNIFORM, fieldName='', fixed=OFF, magnitude=20.0, name=
+    'BC-1', region=Region(
+    edges=mdb.models['Model-1'].rootAssembly.instances['Part-1-1'].edges.getSequenceFromMask(
+    mask=('[#20 ]', ), )))
+mdb.models['Model-1'].SurfaceHeatFlux(createStepName='Thermal', magnitude=
+    2000.0, name='Heat Flux', region=Region(
+    side1Edges=mdb.models['Model-1'].rootAssembly.instances['Part-1-1'].edges.getSequenceFromMask(
+    mask=('[#4 ]', ), )))
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Model-1', modelPrint=OFF, 
+    multiprocessingMode=DEFAULT, name='Job-1', nodalOutputPrecision=SINGLE, 
+    numCpus=1, numGPUs=0, queue=None, scratch='', type=ANALYSIS, 
+    userSubroutine='', waitHours=0, waitMinutes=0)
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+del mdb.models['Model-1'].boundaryConditions['BC-1']
+del mdb.models['Model-1'].loads['Heat Flux']
+mdb.models['Model-1'].rootAssembly.Surface(name='BottomElems', side1Edges=
+    mdb.models['Model-1'].rootAssembly.instances['Part-1-1'].edges.getSequenceFromMask(
+    ('[#4 ]', ), ))
+mdb.models['Model-1'].SurfaceHeatFlux(createStepName='Thermal', magnitude=
+    2000.0, name='Heat Flux', region=
+    mdb.models['Model-1'].rootAssembly.surfaces['BottomElems'])
+mdb.models['Model-1'].rootAssembly.Set(edges=
+    mdb.models['Model-1'].rootAssembly.instances['Part-1-1'].edges.getSequenceFromMask(
+    ('[#20 ]', ), ), name='TopNodes')
+mdb.models['Model-1'].TemperatureBC(amplitude=UNSET, createStepName='Thermal', 
+    distributionType=UNIFORM, fieldName='', fixed=OFF, magnitude=20.0, name=
+    'FixedTemp', region=mdb.models['Model-1'].rootAssembly.sets['TopNodes'])
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['Model-1'].rootAssembly.Set(faces=
+    mdb.models['Model-1'].rootAssembly.instances['Part-1-1'].faces.getSequenceFromMask(
+    ('[#2 ]', ), ), name='REGION1')
+mdb.models['Model-1'].BodyHeatFlux(createStepName='Thermal', magnitude=1.0, 
+    name='Body1', region=mdb.models['Model-1'].rootAssembly.sets['REGION1'])
+mdb.models['Model-1'].rootAssembly.Set(faces=
+    mdb.models['Model-1'].rootAssembly.instances['Part-1-1'].faces.getSequenceFromMask(
+    ('[#1 ]', ), ), name='REGION2')
+mdb.models['Model-1'].BodyHeatFlux(createStepName='Thermal', magnitude=2.0, 
+    name='Body2', region=mdb.models['Model-1'].rootAssembly.sets['REGION2'])
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['Model-1'].parts['Part-1'].deleteMesh()
+mdb.models['Model-1'].parts['Part-1'].seedPart(deviationFactor=0.1, 
+    minSizeFactor=0.1, size=0.01)
+mdb.models['Model-1'].parts['Part-1'].seedEdgeBySize(constraint=FINER, 
+    deviationFactor=0.1, edges=
+    mdb.models['Model-1'].parts['Part-1'].edges.getSequenceFromMask(('[#1 ]', 
+    ), ), size=0.01)
+mdb.models['Model-1'].parts['Part-1'].generateMesh()
+mdb.models['Model-1'].parts['Part-1'].deleteMesh()
+mdb.models['Model-1'].parts['Part-1'].seedPart(deviationFactor=0.1, 
+    minSizeFactor=0.1, size=0.008)
+mdb.models['Model-1'].parts['Part-1'].seedEdgeBySize(constraint=FINER, 
+    deviationFactor=0.1, edges=
+    mdb.models['Model-1'].parts['Part-1'].edges.getSequenceFromMask(('[#1 ]', 
+    ), ), size=0.008)
+mdb.models['Model-1'].parts['Part-1'].generateMesh()
+mdb.models['Model-1'].parts['Part-1'].featurelistInfo()
+mdb.models['Model-1'].parts['Part-1'].deleteMesh()
+mdb.models['Model-1'].parts['Part-1'].deleteSeeds()
+mdb.models['Model-1'].parts['Part-1'].seedPart(deviationFactor=0.1, 
+    minSizeFactor=0.1, size=0.005)
+mdb.models['Model-1'].parts['Part-1'].deleteSeeds(regions=
+    mdb.models['Model-1'].parts['Part-1'].edges.getSequenceFromMask(('[#1 ]', 
+    ), ))
+mdb.models['Model-1'].parts['Part-1'].deleteSeeds()
+mdb.models['Model-1'].parts['Part-1'].seedPart(deviationFactor=0.1, 
+    minSizeFactor=0.1, size=0.005)
+mdb.models['Model-1'].parts['Part-1'].generateMesh()
+mdb.models['Model-1'].parts['Part-1'].deleteMesh()
+mdb.models['Model-1'].parts['Part-1'].seedPart(deviationFactor=0.1, 
+    minSizeFactor=0.1, size=0.007)
+mdb.models['Model-1'].parts['Part-1'].deleteSeeds()
+mdb.models['Model-1'].parts['Part-1'].seedPart(deviationFactor=0.1, 
+    minSizeFactor=0.1, size=0.007)
+mdb.models['Model-1'].parts['Part-1'].generateMesh()
+mdb.models['Model-1'].parts['Part-1'].deleteMesh()
+mdb.models['Model-1'].parts['Part-1'].seedPart(deviationFactor=0.1, 
+    minSizeFactor=0.1, size=0.006)
+mdb.models['Model-1'].parts['Part-1'].generateMesh()
+mdb.models['Model-1'].parts['Part-1'].deleteMesh()
+mdb.models['Model-1'].parts['Part-1'].seedPart(deviationFactor=0.1, 
+    minSizeFactor=0.1, size=0.0055)
+mdb.models['Model-1'].parts['Part-1'].generateMesh()
+mdb.models['Model-1'].rootAssembly.regenerate()
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['Model-1'].parts['Part-1'].deleteMesh()
+mdb.models['Model-1'].parts['Part-1'].seedPart(deviationFactor=0.1, 
+    minSizeFactor=0.1, size=0.00025)
+mdb.models['Model-1'].parts['Part-1'].generateMesh()
+mdb.models['Model-1'].rootAssembly.regenerate()
+#* Academic Teaching license is restricted to 20000 nodes.
+#* Academic Teaching license is restricted to 20000 nodes.
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+del mdb.models['Model-1'].sketches['WavyInterfaceVHighAmp']
+del mdb.models['Model-1'].parts['Part-1'].features['Partition face-1']
+mdb.openIges(
+    'C:/Users/marcustan/Dropbox/IGFEM-Curves/ConformingMeshAbaqus/semicircle.igs'
+    , msbo=0, scaleFromFile=OFF, topology=WIRE, trimCurve=DEFAULT, uniteWires=
+    OFF)
+mdb.models['Model-1'].ConstrainedSketchFromGeometryFile(geometryFile=mdb.acis, 
+    name='semicircle', scale=1.0)
+mdb.models['Model-1'].ConstrainedSketch(name='__edit__', objectToCopy=
+    mdb.models['Model-1'].sketches['semicircle'])
+del mdb.models['Model-1'].sketches['__edit__']
+del mdb.models['Model-1'].sketches['semicircle']
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.openIges(
+    'C:/Users/marcustan/Dropbox/IGFEM-Curves/ConformingMeshAbaqus/semicircle.igs'
+    , msbo=0, scaleFromFile=OFF, topology=WIRE, trimCurve=DEFAULT, uniteWires=
+    OFF)
+mdb.models['Model-1'].ConstrainedSketchFromGeometryFile(geometryFile=mdb.acis, 
+    name='semicircle', scale=1.0)
+mdb.models['Model-1'].ConstrainedSketch(name='__edit__', objectToCopy=
+    mdb.models['Model-1'].sketches['semicircle'])
+mdb.models['Model-1'].sketches.changeKey(fromName='__edit__', toName=
+    'semicircle')
+mdb.models['Model-1'].ConstrainedSketch(gridSpacing=0.005, name='__profile__', 
+    sheetSize=0.223, transform=
+    mdb.models['Model-1'].parts['Part-1'].MakeSketchTransform(
+    sketchPlane=mdb.models['Model-1'].parts['Part-1'].faces[0], 
+    sketchPlaneSide=SIDE1, sketchOrientation=RIGHT, origin=(0.05, 0.025, 0.0)))
+mdb.models['Model-1'].sketches['__profile__'].sketchOptions.setValues(
+    decimalPlaces=3)
+mdb.models['Model-1'].parts['Part-1'].projectReferencesOntoSketch(filter=
+    COPLANAR_EDGES, sketch=mdb.models['Model-1'].sketches['__profile__'])
+mdb.models['Model-1'].sketches['__profile__'].retrieveSketch(sketch=
+    mdb.models['Model-1'].sketches['semicircle'])
+mdb.models['Model-1'].sketches['__profile__'].move(objectList=(
+    mdb.models['Model-1'].sketches['__profile__'].geometry[8], ), vector=(
+    -0.05, -0.025))
+mdb.models['Model-1'].parts['Part-1'].PartitionFaceBySketch(faces=
+    mdb.models['Model-1'].parts['Part-1'].faces.getSequenceFromMask(('[#1 ]', 
+    ), ), sketch=mdb.models['Model-1'].sketches['__profile__'])
+del mdb.models['Model-1'].sketches['__profile__']
+mdb.models['Model-1'].ConstrainedSketch(gridSpacing=0.005, name='__profile__', 
+    sheetSize=0.223, transform=
+    mdb.models['Model-1'].parts['Part-1'].MakeSketchTransform(
+    sketchPlane=mdb.models['Model-1'].parts['Part-1'].faces[1], 
+    sketchPlaneSide=SIDE1, sketchOrientation=RIGHT, origin=(0.05, 0.016977, 
+    0.0)))
+mdb.models['Model-1'].sketches['__profile__'].sketchOptions.setValues(
+    decimalPlaces=3)
+mdb.models['Model-1'].parts['Part-1'].projectReferencesOntoSketch(filter=
+    COPLANAR_EDGES, sketch=mdb.models['Model-1'].sketches['__profile__'])
+del mdb.models['Model-1'].sketches['__profile__']
+mdb.models['Model-1'].parts['Part-1'].setMeshControls(allowMapped=False, 
+    elemShape=TRI, regions=
+    mdb.models['Model-1'].parts['Part-1'].faces.getSequenceFromMask(('[#3 ]', 
+    ), ))
+mdb.models['Model-1'].parts['Part-1'].setElementType(elemTypes=(ElemType(
+    elemCode=DC2D4, elemLibrary=STANDARD), ElemType(elemCode=DC2D3, 
+    elemLibrary=STANDARD)), regions=(
+    mdb.models['Model-1'].parts['Part-1'].faces.getSequenceFromMask(('[#3 ]', 
+    ), ), ))
+mdb.models['Model-1'].parts['Part-1'].Set(name='INNODE', vertices=
+    mdb.models['Model-1'].parts['Part-1'].vertices.getSequenceFromMask((
+    '[#1 ]', ), ))
+mdb.models['Model-1'].parts['Part-1'].seedPart(deviationFactor=0.1, 
+    minSizeFactor=0.1, size=0.001)
+mdb.models['Model-1'].parts['Part-1'].generateMesh()
+mdb.models['Model-1'].parts['Part-1'].Set(faces=
+    mdb.models['Model-1'].parts['Part-1'].faces.getSequenceFromMask(('[#1 ]', 
+    ), ), name='REGION1')
+mdb.models['Model-1'].parts['Part-1'].Set(faces=
+    mdb.models['Model-1'].parts['Part-1'].faces.getSequenceFromMask(('[#2 ]', 
+    ), ), name='REGION2')
+mdb.models['Model-1'].parts['Part-1'].Set(edges=
+    mdb.models['Model-1'].parts['Part-1'].edges.getSequenceFromMask(('[#8 ]', 
+    ), ), name='TOP')
+mdb.models['Model-1'].parts['Part-1'].Set(edges=
+    mdb.models['Model-1'].parts['Part-1'].edges.getSequenceFromMask(('[#62 ]', 
+    ), ), name='BOTTOM')
+mdb.models['Model-1'].rootAssembly.regenerate()
+mdb.jobs.changeKey(fromName='Job-1', toName='semicircle')
+del mdb.models['Model-1'].loads['Body1']
+del mdb.models['Model-1'].loads['Body2']
+del mdb.models['Model-1'].loads['Heat Flux']
+mdb.models['Model-1'].SurfaceHeatFlux(createStepName='Thermal', magnitude=
+    2000.0, name='BottomHeat', region=Region(
+    side1Edges=mdb.models['Model-1'].rootAssembly.instances['Part-1-1'].edges.getSequenceFromMask(
+    mask=('[#62 ]', ), )))
+mdb.models['Model-1'].parts['Part-1'].deleteMesh()
+mdb.models['Model-1'].parts['Part-1'].seedPart(deviationFactor=0.1, 
+    minSizeFactor=0.1, size=0.005)
+mdb.models['Model-1'].parts['Part-1'].generateMesh()
+mdb.models['Model-1'].rootAssembly.regenerate()
+mdb.models['Model-1'].parts['Part-1'].Set(name='INNODE', vertices=
+    mdb.models['Model-1'].parts['Part-1'].vertices.getSequenceFromMask((
+    '[#2 ]', ), ))
+mdb.models['Model-1'].rootAssembly.regenerate()
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+del mdb.models['Model-1'].parts['Part-1'].sets['INNODE']
+mdb.models['Model-1'].parts['Part-1'].Set(edges=
+    mdb.models['Model-1'].parts['Part-1'].edges.getSequenceFromMask(('[#10 ]', 
+    ), ), name='LEFT')
+mdb.models['Model-1'].parts['Part-1'].Set(edges=
+    mdb.models['Model-1'].parts['Part-1'].edges.getSequenceFromMask(('[#4 ]', 
+    ), ), name='RIGHT')
+mdb.models['Model-1'].parts['Part-1'].deleteMesh()
+mdb.models['Model-1'].parts['Part-1'].seedPart(deviationFactor=0.1, 
+    minSizeFactor=0.1, size=0.01)
+mdb.models['Model-1'].parts['Part-1'].generateMesh()
+mdb.models['Model-1'].rootAssembly.regenerate()
+del mdb.models['Model-1'].loads['BottomHeat']
+del mdb.models['Model-1'].boundaryConditions['FixedTemp']
+mdb.jobs.changeKey(fromName='semicircle', toName=
+    'temp_all_semicircle_ro_p041_116_elems')
+mdb.models['Model-1'].materials['Material-1'].conductivity.setValues(table=((
+    1.0, ), ))
+mdb.models['Model-1'].parts['Part-1'].deleteMesh()
+mdb.models['Model-1'].parts['Part-1'].seedPart(deviationFactor=0.1, 
+    minSizeFactor=0.1, size=0.005)
+mdb.models['Model-1'].parts['Part-1'].generateMesh()
+mdb.models['Model-1'].rootAssembly.regenerate()
+mdb.jobs.changeKey(fromName='temp_all_semicircle_ro_p041_116_elems', toName=
+    'temp_all_semicircle_ro_p041_450_elems')
+mdb.models['Model-1'].parts['Part-1'].deleteMesh()
+mdb.models['Model-1'].parts['Part-1'].seedPart(deviationFactor=0.1, 
+    minSizeFactor=0.1, size=0.0025)
+mdb.models['Model-1'].parts['Part-1'].generateMesh()
+mdb.models['Model-1'].rootAssembly.regenerate()
+mdb.jobs.changeKey(fromName='temp_all_semicircle_ro_p041_450_elems', toName=
+    'temp_all_semicircle_ro_p041_1864_elems')
+mdb.models['Model-1'].parts['Part-1'].deleteMesh()
+mdb.models['Model-1'].parts['Part-1'].seedPart(deviationFactor=0.1, 
+    minSizeFactor=0.1, size=0.00125)
+mdb.models['Model-1'].parts['Part-1'].generateMesh()
+mdb.models['Model-1'].rootAssembly.regenerate()
+mdb.jobs.changeKey(fromName='temp_all_semicircle_ro_p041_1864_elems', toName=
+    'temp_all_semicircle_ro_p041_6758_elems')
+mdb.jobs.changeKey(fromName='temp_all_semicircle_ro_p041_6758_elems', toName=
+    'temp_all_semicircle_ro_p04_6758_elems')
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['Model-1'].parts['Part-1'].deleteMesh()
+mdb.models['Model-1'].parts['Part-1'].seedPart(deviationFactor=0.1, 
+    minSizeFactor=0.1, size=0.025)
+mdb.models['Model-1'].parts['Part-1'].generateMesh()
+mdb.models['Model-1'].rootAssembly.regenerate()
+mdb.jobs.changeKey(fromName='temp_all_semicircle_ro_p04_6758_elems', toName=
+    'temp_all_semicircle_ro_p04_21_elems')
+mdb.models['Model-1'].parts['Part-1'].deleteSets(setNames=('BOTTOM', 'LEFT', 
+    'RIGHT', 'TOP'))
+mdb.models['Model-1'].parts['Part-1'].Set(edges=
+    mdb.models['Model-1'].parts['Part-1'].edges.getSequenceFromMask(('[#7e ]', 
+    ), ), name='OUTER')
+mdb.models['Model-1'].rootAssembly.regenerate()
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['Model-1'].parts['Part-1'].deleteMesh()
+mdb.models['Model-1'].parts['Part-1'].seedPart(deviationFactor=0.1, 
+    minSizeFactor=0.1, size=0.008)
+mdb.models['Model-1'].parts['Part-1'].generateMesh()
+mdb.models['Model-1'].parts['Part-1'].deleteMesh()
+mdb.models['Model-1'].parts['Part-1'].seedPart(deviationFactor=0.1, 
+    minSizeFactor=0.1, size=0.009)
+mdb.models['Model-1'].parts['Part-1'].seedPart(deviationFactor=0.1, 
+    minSizeFactor=0.1, size=0.008)
+mdb.models['Model-1'].parts['Part-1'].generateMesh()
+mdb.models['Model-1'].parts['Part-1'].deleteMesh()
+mdb.models['Model-1'].parts['Part-1'].seedPart(deviationFactor=0.1, 
+    minSizeFactor=0.1, size=0.006)
+mdb.models['Model-1'].parts['Part-1'].generateMesh()
+mdb.models['Model-1'].parts['Part-1'].deleteMesh()
+mdb.models['Model-1'].parts['Part-1'].seedPart(deviationFactor=0.1, 
+    minSizeFactor=0.1, size=0.007)
+mdb.models['Model-1'].parts['Part-1'].generateMesh()
+mdb.models['Model-1'].parts['Part-1'].featurelistInfo()
+mdb.models['Model-1'].parts['Part-1'].featurelistInfo()
+mdb.models['Model-1'].parts['Part-1'].featurelistInfo()
+mdb.models['Model-1'].rootAssembly.regenerate()
+mdb.jobs.changeKey(fromName='temp_all_semicircle_ro_p04_21_elems', toName=
+    'temp_all_semicircle_ro_p04_225_elems')
+mdb.models['Model-1'].parts['Part-1'].deleteMesh()
+mdb.models['Model-1'].parts['Part-1'].seedPart(deviationFactor=0.1, 
+    minSizeFactor=0.1, size=0.0071)
+mdb.models['Model-1'].parts['Part-1'].generateMesh()
+mdb.models['Model-1'].parts['Part-1'].deleteMesh()
+mdb.models['Model-1'].parts['Part-1'].seedPart(deviationFactor=0.1, 
+    minSizeFactor=0.1, size=0.0072)
+mdb.models['Model-1'].parts['Part-1'].generateMesh()
+mdb.models['Model-1'].rootAssembly.regenerate()
+mdb.jobs.changeKey(fromName='temp_all_semicircle_ro_p04_225_elems', toName=
+    'temp_all_semicircle_ro_p04_207_elems')
+# Save by marcustan on 2013_11_18-19.06.20; build 6.13-2 2013_07_18-06.22.41 126428
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+del mdb.models['Model-1'].parts['Part-1'].features['Partition face-1']
+mdb.models['Model-1'].parts['Part-1'].deleteSets(setNames=('REGION1', 
+    'REGION2'))
+del mdb.models['Model-1'].sketches['semicircle']
+mdb.openIges(
+    'C:/Users/marcustan/Dropbox/IGFEM-Curves/ConformingMeshAbaqus/semicircle_ro_p02.igs'
+    , msbo=0, scaleFromFile=OFF, topology=WIRE, trimCurve=DEFAULT, uniteWires=
+    OFF)
+mdb.models['Model-1'].ConstrainedSketchFromGeometryFile(geometryFile=mdb.acis, 
+    name='semicircle_ro_p02', scale=1.0)
+mdb.models['Model-1'].ConstrainedSketch(name='__edit__', objectToCopy=
+    mdb.models['Model-1'].sketches['semicircle_ro_p02'])
+del mdb.models['Model-1'].sketches['__edit__']
+mdb.models['Model-1'].ConstrainedSketch(gridSpacing=0.005, name='__profile__', 
+    sheetSize=0.223, transform=
+    mdb.models['Model-1'].parts['Part-1'].MakeSketchTransform(
+    sketchPlane=mdb.models['Model-1'].parts['Part-1'].faces[0], 
+    sketchPlaneSide=SIDE1, sketchOrientation=RIGHT, origin=(0.05, 0.025, 0.0)))
+mdb.models['Model-1'].sketches['__profile__'].sketchOptions.setValues(
+    decimalPlaces=3)
+mdb.models['Model-1'].parts['Part-1'].projectReferencesOntoSketch(filter=
+    COPLANAR_EDGES, sketch=mdb.models['Model-1'].sketches['__profile__'])
+mdb.models['Model-1'].sketches['__profile__'].retrieveSketch(sketch=
+    mdb.models['Model-1'].sketches['semicircle_ro_p02'])
+mdb.models['Model-1'].sketches['__profile__'].move(objectList=(
+    mdb.models['Model-1'].sketches['__profile__'].geometry[8], ), vector=(
+    -0.05, -0.025))
+mdb.models['Model-1'].parts['Part-1'].PartitionFaceBySketch(faces=
+    mdb.models['Model-1'].parts['Part-1'].faces.getSequenceFromMask(('[#1 ]', 
+    ), ), sketch=mdb.models['Model-1'].sketches['__profile__'])
+del mdb.models['Model-1'].sketches['__profile__']
+mdb.models['Model-1'].parts['Part-1'].Set(faces=
+    mdb.models['Model-1'].parts['Part-1'].faces.getSequenceFromMask(('[#1 ]', 
+    ), ), name='Set-2')
+mdb.models['Model-1'].parts['Part-1'].sets.changeKey(fromName='Set-2', toName=
+    'REGION1')
+mdb.models['Model-1'].parts['Part-1'].Set(faces=
+    mdb.models['Model-1'].parts['Part-1'].faces.getSequenceFromMask(('[#2 ]', 
+    ), ), name='REGION2')
+mdb.models['Model-1'].rootAssembly.regenerate()
+mdb.jobs.changeKey(fromName='temp_all_semicircle_ro_p04_207_elems', toName=
+    'temp_all_semicircle_ro_p02_207_elems')
+mdb.models['Model-1'].parts['Part-1'].seedPart(deviationFactor=0.1, 
+    minSizeFactor=0.1, size=0.01)
+mdb.models['Model-1'].parts['Part-1'].setMeshControls(allowMapped=False, 
+    elemShape=TRI, regions=
+    mdb.models['Model-1'].parts['Part-1'].faces.getSequenceFromMask(('[#3 ]', 
+    ), ))
+mdb.models['Model-1'].parts['Part-1'].setElementType(elemTypes=(ElemType(
+    elemCode=DC2D4, elemLibrary=STANDARD), ElemType(elemCode=DC2D3, 
+    elemLibrary=STANDARD)), regions=(
+    mdb.models['Model-1'].parts['Part-1'].faces.getSequenceFromMask(('[#3 ]', 
+    ), ), ))
+mdb.models['Model-1'].parts['Part-1'].generateMesh()
+mdb.models['Model-1'].rootAssembly.regenerate()
+mdb.jobs.changeKey(fromName='temp_all_semicircle_ro_p02_207_elems', toName=
+    'temp_all_semicircle_ro_p02_112_elems')
+# Save by marcustan on 2013_11_18-19.09.49; build 6.13-2 2013_07_18-06.22.41 126428
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['Model-1'].parts['Part-1'].Set(edges=
+    mdb.models['Model-1'].parts['Part-1'].edges.getSequenceFromMask(('[#7e ]', 
+    ), ), name='OUTER')
+mdb.models['Model-1'].rootAssembly.regenerate()
+mdb.models['Model-1'].parts['Part-1'].deleteMesh()
+mdb.models['Model-1'].parts['Part-1'].seedPart(deviationFactor=0.1, 
+    minSizeFactor=0.1, size=0.005)
+mdb.models['Model-1'].parts['Part-1'].generateMesh()
+mdb.models['Model-1'].rootAssembly.regenerate()
+mdb.jobs.changeKey(fromName='temp_all_semicircle_ro_p02_112_elems', toName=
+    'temp_all_semicircle_ro_p02_456_elems')
+mdb.models['Model-1'].parts['Part-1'].deleteMesh()
+mdb.models['Model-1'].parts['Part-1'].seedPart(deviationFactor=0.1, 
+    minSizeFactor=0.1, size=0.025)
+mdb.models['Model-1'].parts['Part-1'].generateMesh()
+mdb.models['Model-1'].rootAssembly.regenerate()
+mdb.jobs.changeKey(fromName='temp_all_semicircle_ro_p02_456_elems', toName=
+    'temp_all_semicircle_ro_p02_26_elems')
+mdb.models['Model-1'].parts['Part-1'].deleteMesh()
+mdb.models['Model-1'].parts['Part-1'].seedPart(deviationFactor=0.1, 
+    minSizeFactor=0.1, size=0.0025)
+mdb.models['Model-1'].parts['Part-1'].generateMesh()
+mdb.models['Model-1'].rootAssembly.regenerate()
+mdb.jobs.changeKey(fromName='temp_all_semicircle_ro_p02_26_elems', toName=
+    'temp_all_semicircle_ro_p02_1804_elems')
+# Save by marcustan on 2013_11_18-20.03.26; build 6.13-2 2013_07_18-06.22.41 126428
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['Model-1'].parts['Part-1'].deleteMesh()
+mdb.models['Model-1'].parts['Part-1'].seedPart(deviationFactor=0.1, 
+    minSizeFactor=0.1, size=0.00125)
+mdb.models['Model-1'].parts['Part-1'].generateMesh()
+mdb.models['Model-1'].rootAssembly.regenerate()
+mdb.jobs.changeKey(fromName='temp_all_semicircle_ro_p02_1804_elems', toName=
+    'temp_all_semicircle_ro_p02_6766_elems')
+# Save by marcustan on 2013_11_18-23.47.28; build 6.13-2 2013_07_18-06.22.41 126428

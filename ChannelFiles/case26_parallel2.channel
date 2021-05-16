@@ -1,0 +1,67 @@
+number of channels, 7
+end point number and temperature, 1
+1 21.5
+model, mean temperature
+mass in, 1, 5e-4
+heat capacity, 3494
+viscosity, 3.405e-6
+pressure out, 8, 0
+diameters, 7
+7.5e-4
+7.5e-4
+7.5e-4
+7.5e-4
+7.5e-4
+7.5e-4
+7.5e-4
+nurbs control points, 1, 2, 2
+  0     1.800000000000000e-01
+1.563375151671310e-02     1.694071696078338e-01
+nurbs knot vector, 1, 4
+0 0 1 1
+connectivity, 1
+1 2
+nurbs control points, 2, 2, 2
+1.563375151671310e-02     1.694071696078338e-01
+3.594409904942157e-02     1.200176309443683e-01
+nurbs knot vector, 2, 4
+0 0 1 1
+connectivity, 2
+2 4
+nurbs control points, 3, 2, 3
+1.563375151671310e-02     1.694071696078338e-01
+1.340064519496356e-01     1.828401147808990e-01
+1.140545239160887e-01     8.010536838432039e-02
+nurbs knot vector, 3, 5
+0 0 0.5 1 1
+connectivity, 3
+2 5
+nurbs control points, 4, 2, 2
+3.594409904942157e-02     1.200176309443683e-01
+1.140545239160887e-01     8.010536838432039e-02
+nurbs knot vector, 4, 4
+0 0 1 1
+connectivity, 4
+4 5
+nurbs control points, 5, 2, 3
+ 3.594409904942157e-02     1.200176309443683e-01
+ 1.609320776221930e-02     1.723811877885712e-02
+ 1.342740628401295e-01     3.019117174406092e-02
+nurbs knot vector, 5, 5
+0 0 0.5 1 1
+connectivity, 5
+4 7
+nurbs control points, 6, 2, 2
+ 1.140545239160887e-01     8.010536838432039e-02
+ 1.342740628401295e-01     3.019117174406092e-02
+nurbs knot vector, 6, 4
+0 0 1 1
+connectivity, 6
+5 7
+nurbs control points, 7, 2, 2
+1.342740628401295e-01     3.019117174406092e-02
+1.500000000000000e-01     2.000000000000000e-02
+nurbs knot vector, 7, 4
+0 0 1 1
+connectivity, 7
+7 8

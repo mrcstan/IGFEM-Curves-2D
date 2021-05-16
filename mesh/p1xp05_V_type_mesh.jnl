@@ -1,0 +1,235 @@
+# -*- coding: mbcs -*-
+from abaqus import *
+upgradeMdb(
+    'C:/Users/marcustan/Dropbox/IGFEM-Curves/ConformingMeshAbaqus/Conform_temp_all_semicircle_ro_p041_6_10-6.10-1.cae'
+    , 
+    'C:/Users/marcustan/Dropbox/IGFEM-Curves/ConformingMeshAbaqus/Conform_temp_all_semicircle_ro_p041_6_10.cae')
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['Model-1'].parts['Part-1'].deleteMesh()
+mdb.models['Model-1'].parts['Part-1'].seedPart(deviationFactor=0.1, 
+    minSizeFactor=0.1, size=0.01)
+mdb.models['Model-1'].parts['Part-1'].generateMesh()
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.jobs.changeKey(fromName='temp_all_semicircle_ro_p041_40k_elems', toName=
+    'temp_all_semicircle_ro_p041_112_elems')
+mdb.models['Model-1'].parts['Part-1'].deleteMesh()
+mdb.models['Model-1'].parts['Part-1'].seedPart(deviationFactor=0.1, 
+    minSizeFactor=0.1, size=0.005)
+mdb.models['Model-1'].parts['Part-1'].generateMesh()
+mdb.jobs.changeKey(fromName='temp_all_semicircle_ro_p041_112_elems', toName=
+    'temp_all_semicircle_ro_p041_460_elems')
+mdb.models['Model-1'].parts['Part-1'].deleteMesh()
+mdb.models['Model-1'].parts['Part-1'].seedPart(deviationFactor=0.1, 
+    minSizeFactor=0.1, size=0.0025)
+mdb.models['Model-1'].parts['Part-1'].generateMesh()
+mdb.jobs.changeKey(fromName='temp_all_semicircle_ro_p041_460_elems', toName=
+    'temp_all_semicircle_ro_p041_1887_elems')
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['Model-1'].parts['Part-1'].deleteMesh()
+mdb.models['Model-1'].parts['Part-1'].seedPart(deviationFactor=0.1, 
+    minSizeFactor=0.1, size=0.00125)
+mdb.models['Model-1'].parts['Part-1'].generateMesh()
+mdb.jobs.changeKey(fromName='temp_all_semicircle_ro_p041_1887_elems', toName=
+    'temp_all_semicircle_ro_p041_6704_elems')
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+del mdb.models['Model-1'].sketches['semicircle_ro_p041']
+mdb.models['Model-1'].parts['Part-1'].deleteMesh()
+mdb.models['Model-1'].Part(name='Part-1-failed', objectToCopy=
+    mdb.models['Model-1'].parts['Part-1'])
+mdb.models['Model-1'].parts['Part-1-failed'].Unlock(reportWarnings=False)
+del mdb.models['Model-1'].parts['Part-1']
+mdb.models['Model-1'].parts.changeKey(fromName='Part-1-failed', toName=
+    'Part-1')
+mdb.models['Model-1'].rootAssembly.regenerate()
+#* FeatureError: The assembly is locked and cannot be regenerated.
+del mdb.models['Model-1'].parts['Part-1'].features['Partition face-1']
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['Model-1'].ConstrainedSketch(gridSpacing=0.005, name='__profile__', 
+    sheetSize=0.223, transform=
+    mdb.models['Model-1'].parts['Part-1'].MakeSketchTransform(
+    sketchPlane=mdb.models['Model-1'].parts['Part-1'].faces[0], 
+    sketchPlaneSide=SIDE1, sketchOrientation=RIGHT, origin=(0.05, 0.025, 0.0)))
+mdb.models['Model-1'].sketches['__profile__'].sketchOptions.setValues(
+    decimalPlaces=3)
+mdb.models['Model-1'].parts['Part-1'].projectReferencesOntoSketch(filter=
+    COPLANAR_EDGES, sketch=mdb.models['Model-1'].sketches['__profile__'])
+mdb.models['Model-1'].sketches['__profile__'].Spot(point=(0.05, 0.0))
+del mdb.models['Model-1'].sketches['__profile__']
+mdb.models['Model-1'].ConstrainedSketch(gridSpacing=0.005, name='__profile__', 
+    sheetSize=0.223, transform=
+    mdb.models['Model-1'].parts['Part-1'].MakeSketchTransform(
+    sketchPlane=mdb.models['Model-1'].parts['Part-1'].faces[0], 
+    sketchPlaneSide=SIDE1, sketchOrientation=RIGHT, origin=(0.05, 0.025, 0.0)))
+mdb.models['Model-1'].sketches['__profile__'].sketchOptions.setValues(
+    decimalPlaces=3)
+mdb.models['Model-1'].parts['Part-1'].projectReferencesOntoSketch(filter=
+    COPLANAR_EDGES, sketch=mdb.models['Model-1'].sketches['__profile__'])
+mdb.models['Model-1'].sketches['__profile__'].Line(point1=(0.0, -0.025), 
+    point2=(0.0, 0.025))
+mdb.models['Model-1'].sketches['__profile__'].VerticalConstraint(addUndoState=
+    False, entity=mdb.models['Model-1'].sketches['__profile__'].geometry[6])
+mdb.models['Model-1'].sketches['__profile__'].Line(point1=(-0.05, 0.0), point2=
+    (0.05, 0.0))
+mdb.models['Model-1'].sketches['__profile__'].HorizontalConstraint(
+    addUndoState=False, entity=
+    mdb.models['Model-1'].sketches['__profile__'].geometry[7])
+mdb.models['Model-1'].sketches['__profile__'].Line(point1=(-0.025, -0.025), 
+    point2=(-0.025, 0.025))
+mdb.models['Model-1'].sketches['__profile__'].VerticalConstraint(addUndoState=
+    False, entity=mdb.models['Model-1'].sketches['__profile__'].geometry[8])
+mdb.models['Model-1'].sketches['__profile__'].Line(point1=(0.025, -0.025), 
+    point2=(0.025, 0.025))
+mdb.models['Model-1'].sketches['__profile__'].VerticalConstraint(addUndoState=
+    False, entity=mdb.models['Model-1'].sketches['__profile__'].geometry[9])
+mdb.models['Model-1'].sketches['__profile__'].Line(point1=(0.025, 0.025), 
+    point2=(-0.025, -0.025))
+mdb.models['Model-1'].sketches['__profile__'].Line(point1=(-0.025, 0.025), 
+    point2=(0.025, -0.025))
+mdb.models['Model-1'].sketches['__profile__'].Line(point1=(-0.025, 0.025), 
+    point2=(-0.05, 0.0))
+mdb.models['Model-1'].sketches['__profile__'].Line(point1=(-0.05, 0.0), point2=
+    (-0.025, -0.025))
+mdb.models['Model-1'].sketches['__profile__'].PerpendicularConstraint(
+    addUndoState=False, entity1=
+    mdb.models['Model-1'].sketches['__profile__'].geometry[12], entity2=
+    mdb.models['Model-1'].sketches['__profile__'].geometry[13])
+mdb.models['Model-1'].sketches['__profile__'].Line(point1=(0.025, 0.025), 
+    point2=(0.05, 0.0))
+mdb.models['Model-1'].sketches['__profile__'].Line(point1=(0.05, 0.0), point2=(
+    0.025, -0.025))
+mdb.models['Model-1'].sketches['__profile__'].PerpendicularConstraint(
+    addUndoState=False, entity1=
+    mdb.models['Model-1'].sketches['__profile__'].geometry[14], entity2=
+    mdb.models['Model-1'].sketches['__profile__'].geometry[15])
+mdb.models['Model-1'].parts['Part-1'].PartitionFaceBySketch(faces=
+    mdb.models['Model-1'].parts['Part-1'].faces.getSequenceFromMask(('[#1 ]', 
+    ), ), sketch=mdb.models['Model-1'].sketches['__profile__'])
+del mdb.models['Model-1'].sketches['__profile__']
+mdb.models['Model-1'].parts['Part-1'].seedPart(deviationFactor=0.1, 
+    minSizeFactor=0.1, size=1.0)
+mdb.models['Model-1'].parts['Part-1'].generateMesh()
+mdb.models['Model-1'].parts['Part-1'].deleteSets(setNames=('REGION1', 
+    'REGION2'))
+mdb.models['Model-1'].parts['Part-1'].Set(edges=
+    mdb.models['Model-1'].parts['Part-1'].edges.getSequenceFromMask((
+    '[#1022002 ]', ), ), name='BOTTOM')
+mdb.jobs.changeKey(fromName='temp_all_semicircle_ro_p041_6704_elems', toName=
+    'p1xp05_4x2_patran_mesh')
+mdb.models['Model-1'].parts['Part-1'].Set(edges=
+    mdb.models['Model-1'].parts['Part-1'].edges.getSequenceFromMask((
+    '[#1022002 ]', ), ), name='BOTTOM')
+mdb.models['Model-1'].parts['Part-1'].deleteSets(setNames=('BOTTOM', 'LEFT', 
+    'RIGHT', 'TOP'))
+mdb.models['Model-1'].parts['Part-1'].Set(edges=
+    mdb.models['Model-1'].parts['Part-1'].edges.getSequenceFromMask((
+    '[#4048020 ]', ), ), name='TOP')
+mdb.models['Model-1'].parts['Part-1'].Set(edges=
+    mdb.models['Model-1'].parts['Part-1'].edges.getSequenceFromMask((
+    '[#1022002 ]', ), ), name='BOTTOM')
+mdb.models['Model-1'].parts['Part-1'].Set(edges=
+    mdb.models['Model-1'].parts['Part-1'].edges.getSequenceFromMask((
+    '[#8800000 ]', ), ), name='LEFT')
+mdb.models['Model-1'].parts['Part-1'].Set(edges=
+    mdb.models['Model-1'].parts['Part-1'].edges.getSequenceFromMask(('[#14 ]', 
+    ), ), name='RIGHT')
+mdb.models['Model-1'].boundaryConditions.delete(('BOTTOM', 'LEFT', 'RIGHT', 
+    'TOP'))
+# Save by marcustan on 2013_11_17-21.13.34; build 6.13-2 2013_07_18-06.22.41 126428
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['Model-1'].parts['Part-1'].deleteSets(setNames=('BOTTOM', 'LEFT', 
+    'RIGHT', 'TOP'))
+del mdb.models['Model-1'].parts['Part-1'].features['Partition face-1']
+mdb.models['Model-1'].ConstrainedSketch(gridSpacing=0.005, name='__profile__', 
+    sheetSize=0.223, transform=
+    mdb.models['Model-1'].parts['Part-1'].MakeSketchTransform(
+    sketchPlane=mdb.models['Model-1'].parts['Part-1'].faces[0], 
+    sketchPlaneSide=SIDE1, sketchOrientation=RIGHT, origin=(0.05, 0.025, 0.0)))
+mdb.models['Model-1'].sketches['__profile__'].sketchOptions.setValues(
+    decimalPlaces=3)
+mdb.models['Model-1'].parts['Part-1'].projectReferencesOntoSketch(filter=
+    COPLANAR_EDGES, sketch=mdb.models['Model-1'].sketches['__profile__'])
+mdb.models['Model-1'].sketches['__profile__'].Line(point1=(0.0, -0.025), 
+    point2=(0.0, 0.025))
+mdb.models['Model-1'].sketches['__profile__'].VerticalConstraint(addUndoState=
+    False, entity=mdb.models['Model-1'].sketches['__profile__'].geometry[6])
+mdb.models['Model-1'].sketches['__profile__'].Line(point1=(0.0, -0.025), 
+    point2=(-0.05, 0.025))
+mdb.models['Model-1'].sketches['__profile__'].Line(point1=(0.0, -0.025), 
+    point2=(0.05, 0.025))
+mdb.models['Model-1'].parts['Part-1'].PartitionFaceBySketch(faces=
+    mdb.models['Model-1'].parts['Part-1'].faces.getSequenceFromMask(('[#1 ]', 
+    ), ), sketch=mdb.models['Model-1'].sketches['__profile__'])
+del mdb.models['Model-1'].sketches['__profile__']
+# Save by marcustan on 2013_11_17-21.15.21; build 6.13-2 2013_07_18-06.22.41 126428

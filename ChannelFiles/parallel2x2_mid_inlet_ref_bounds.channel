@@ -1,0 +1,146 @@
+number of channels, 10
+
+end point number and temperature, 1
+1 27
+
+model, mean temperature
+mass in, 1, 0.0005
+heat capacity, 3494
+viscosity, 3.405e-06
+density, 1065
+pressure out, 7, 0
+cross section, square 
+
+diameters 
+0.0005
+0.0005
+0.0005
+0.0005
+0.0005
+0.0005
+0.0005
+0.0005
+0.0005
+0.0005
+
+nurbs control points
+0 0.025
+0.005 0.025
+nurbs knot vector
+0 0 1 1 
+connectivity
+1 2
+
+nurbs control points
+0.005 0.025
+0.005 0.045
+0.025 0.045
+nurbs knot vector
+0 0 0.5 1 1 
+connectivity
+2 3
+
+nurbs control points
+0.005 0.025
+0.025 0.025
+nurbs knot vector
+0 0 1 1 
+connectivity
+2 4
+
+nurbs control points
+0.005 0.025
+0.005 0.005
+0.025 0.005
+nurbs knot vector
+0 0 0.5 1 1 
+connectivity
+2 5
+
+nurbs control points
+0.025 0.045
+0.025 0.025
+nurbs knot vector
+0 0 1 1 
+connectivity
+3 4
+
+nurbs control points
+0.025 0.025
+0.025 0.005
+nurbs knot vector
+0 0 1 1 
+connectivity
+4 5
+
+nurbs control points
+0.025 0.045
+0.045 0.045
+0.045 0.025
+nurbs knot vector
+0 0 0.5 1 1 
+connectivity
+3 6
+
+nurbs control points
+0.025 0.025
+0.045 0.025
+nurbs knot vector
+0 0 1 1 
+connectivity
+4 6
+
+nurbs control points
+0.025 0.005
+0.045 0.005
+0.045 0.025
+nurbs knot vector
+0 0 0.5 1 1 
+connectivity
+5 6
+
+nurbs control points
+0.045 0.025
+0.05 0.025
+nurbs knot vector
+0 0 1 1 
+connectivity
+6 7
+
+number of design variables, 18 
+design, 1 
+channel, 2, cpt, 2, x, 0.0015, 0.0155 
+design, 2 
+channel, 2, cpt, 2, y, 0.0345, 0.0485 
+design, 3 
+channel, 1, cpt, 2, x, 0.0015, 0.0155 
+design, 4 
+channel, 1, cpt, 2, y, 0.018, 0.032 
+design, 5 
+channel, 4, cpt, 2, x, 0.0015, 0.0155 
+design, 6 
+channel, 4, cpt, 2, y, 0.0015, 0.0155 
+design, 7 
+channel, 2, cpt, 3, x, 0.018, 0.032 
+design, 8 
+channel, 2, cpt, 3, y, 0.0345, 0.0485 
+design, 9 
+channel, 3, cpt, 2, x, 0.018, 0.032 
+design, 10 
+channel, 3, cpt, 2, y, 0.018, 0.032 
+design, 11 
+channel, 4, cpt, 3, x, 0.018, 0.032 
+design, 12 
+channel, 4, cpt, 3, y, 0.0015, 0.0155 
+design, 13 
+channel, 7, cpt, 2, x, 0.0345, 0.0485 
+design, 14 
+channel, 7, cpt, 2, y, 0.0345, 0.0485 
+design, 15 
+channel, 8, cpt, 2, x, 0.0345, 0.0485 
+design, 16 
+channel, 8, cpt, 2, y, 0.018, 0.032 
+design, 17 
+channel, 9, cpt, 2, x, 0.0345, 0.0485 
+design, 18 
+channel, 9, cpt, 2, y, 0.0015, 0.0155 

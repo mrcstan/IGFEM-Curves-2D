@@ -1,0 +1,61 @@
+number of channels, 4
+end point number and temperature, 1
+1 27
+model, mean temperature
+mass in, 1, 0.0005
+heat capacity, 3494
+viscosity, 3.405e-06
+pressure out, 4, 0
+cross section, square 
+diameters, 4 
+0.00075
+0.00075
+0.00075
+0.00075
+nurbs control points, 1, 2, 2
+0 0.1 
+0.02 0.08 
+nurbs knot vector, 1, 4
+0 0 1 1 
+connectivity, 1
+1 2
+nurbs control points, 2, 2, 3
+0.02 0.08 
+0.02 0.05 
+0.08 0.02 
+nurbs knot vector, 2, 5
+0 0 0.5 1 1 
+connectivity, 2
+2 3
+nurbs control points, 3, 2, 3
+0.02 0.08 
+0.08 0.05 
+0.08 0.02 
+nurbs knot vector, 3, 5
+0 0 0.5 1 1 
+connectivity, 3
+2 3
+nurbs control points, 4, 2, 2
+0.08 0.02 
+0.1 0 
+nurbs knot vector, 4, 4
+0 0 1 1 
+connectivity, 4
+3 4
+number of design variables, 8 
+design, 1 
+channel, 1, cpt, 2, x, 0, 0.1 
+design, 2 
+channel, 1, cpt, 2, y, 0, 0.1 
+design, 3 
+channel, 2, cpt, 2, x, 0, 0.1 
+design, 4 
+channel, 2, cpt, 2, y, 0, 0.1 
+design, 5 
+channel, 3, cpt, 2, x, 0, 0.1 
+design, 6 
+channel, 3, cpt, 2, y, 0, 0.1 
+design, 7 
+channel, 4, cpt, 1, x, 0, 0.1 
+design, 8 
+channel, 4, cpt, 1, y, 0, 0.1 

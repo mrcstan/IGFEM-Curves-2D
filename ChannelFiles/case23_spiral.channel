@@ -1,0 +1,19 @@
+channel end points, 2, 2
+0 0.1
+0.1 0.09
+channel connectivity, 1
+1 2
+mcf, 1
+1.747
+end point number and temperature, 1
+1 21.5
+model, mean temperature
+nurbs control points, 1, 2, 6
+				 0     1.000000000000000e-02                        
+ 1.000000000000000e-01     1.000000000000000e-01                         
+ 1.000000000000000e-01     9.279351765951675e-03                       
+ 1.000000000000000e-01     1.000000000000000e-01                        
+					 0                         0                       
+ 1.000000000000000e-01     9.000000000000000e-02   
+nurbs knot vector, 1, 9
+0 0 0 1 2 3 4 4 4

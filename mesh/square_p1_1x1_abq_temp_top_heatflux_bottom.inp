@@ -1,0 +1,96 @@
+*HEADING
+ABAQUS job created on 25-Oct-12 at 19:21:26
+**
+*#node, 4
+*#element, 2
+**
+*NODE
+    1,           0.,           0.
+    2, 		0.1,           0.
+    3, 		0.1,           0.1
+    4, 		 0.,           0.1
+**
+*ELEMENT, TYPE=DS3 , ELSET=MATERIAL1_PROPERTIES
+     1,   1,   2,  3
+     2,   1,   3,  4
+**
+** Material1_Properties
+**
+*SHELL SECTION, ELSET=MATERIAL1_PROPERTIES, MATERIAL=MATERIAL1
+       0.001,       5
+**
+** Material1
+** Date: 25-Oct-12           Time: 18:13:37
+**
+*MATERIAL, NAME=MATERIAL1
+**
+*DENSITY
+       7860.,
+**
+*CONDUCTIVITY, TYPE=ISO
+         1.,
+**
+*SPECIFIC HEAT
+        450.,
+**
+** Step  1, Default Heat Transfer Step
+** LoadCase, Default
+**
+*STEP, AMPLITUDE=RAMP, INC=10
+Steady State Heat Transfer
+**
+This load case is the default load case that always appears
+*HEAT TRANSFER, STEADY STATE
+         0.1,          1.
+**
+*NSET, NSET=TOP
+	   3, 4
+*ELSET, ELSET=HEATFLUX_BOTTOM
+		1  
+*ELSET, ELSET=HEATSOURCE1
+       1,     2
+**
+** Top_Temperature
+**
+*BOUNDARY, OP=NEW
+TOP,  11, 11,     20.
+**
+** HeatFlux_bottom
+**
+*DFLUX, OP=NEW
+HEATFLUX_BOTTOM, S1,   2000.
+**
+** HeatSource1
+**
+*DFLUX, OP=NEW
+HEATSOURCE1, BF,         0.
+**
+*FILM, OP=NEW
+*CFLUX, OP=NEW
+**
+*NODE PRINT, FREQ=1
+NT,
+**
+*EL PRINT, POS=INTEG, FREQ=0
+**
+*EL PRINT, POS=NODES, FREQ=0
+**
+*EL PRINT, POS=CENTR, FREQ=0
+**
+*EL PRINT, POS=AVERAGE, FREQ=0
+**
+*MODAL PRINT, FREQ=99999
+**
+*PRINT, FREQ=1
+** NODE OUTPUT REQUESTS
+**
+*OUTPUT, FIELD, FREQ=1
+*NODE OUTPUT
+NT,
+**
+** ELEMENT OUTPUT REQUESTS
+** NONE
+** MODAL OUTPUT REQUESTS
+** NONE
+**
+*END STEP

@@ -1,0 +1,107 @@
+number of channels, 7
+end point number and temperature, 1
+1 27
+model, mean temperature
+mass in, 1, 5e-4
+# power x density of reference network
+# powerXdensity, 1, 6.629
+heat capacity, 3494
+viscosity model, 1
+# viscosity at a lower bound of Tmax (35.59 C) equal to the ideal rise in temp of the coolant
+viscosity, 2.344e-6
+density, 1065
+pressure out, 8, 0
+cross section, square
+
+diameters, 7
+7.5e-4
+7.5e-4
+7.5e-4
+7.5e-4
+7.5e-4
+7.5e-4
+7.5e-4
+
+nurbs control points
+0 0.19
+0.02 0.19
+nurbs knot vector
+0 0 1 1
+connectivity
+1 2
+
+nurbs control points
+0.02 0.19
+0.02 0.1
+nurbs knot vector
+0 0 1 1
+connectivity
+2 4
+
+nurbs control points
+0.02 0.19
+0.13 0.19
+0.13 0.1
+nurbs knot vector
+0 0 0.5 1 1
+connectivity
+2 5
+
+nurbs control points
+0.02 0.1
+0.13 0.1
+nurbs knot vector
+0 0 1 1
+connectivity
+4 5
+
+nurbs control points
+0.02 0.1
+0.02 0.01
+0.13 0.01
+nurbs knot vector
+0 0 0.5 1 1
+connectivity
+4 7
+
+nurbs control points
+0.13 0.1
+0.13 0.01
+nurbs knot vector
+0 0 1 1
+connectivity
+5 7
+
+nurbs control points
+0.13 0.01
+0.15 0.01
+nurbs knot vector
+0 0 1 1
+connectivity
+7 8
+
+number of design variables, 12
+design
+channel, 1, cpt, 2, x, 0.005, 0.145
+design
+channel, 1, cpt, 2, y, 0.005, 0.195
+design 
+channel, 3, cpt, 2, x, 0.005, 0.145
+design
+channel, 3, cpt, 2, y, 0.005, 0.195
+design
+channel, 4, cpt, 1, x, 0.005, 0.145
+design
+channel, 4, cpt, 1, y, 0.005, 0.195
+design
+channel, 4, cpt, 2, x, 0.005, 0.145
+design
+channel, 4, cpt, 2, y, 0.005, 0.195
+design
+channel, 5, cpt, 2, x, 0.005, 0.145
+design
+channel, 5, cpt, 2, y, 0.005, 0.195
+design
+channel, 5, cpt, 3, x, 0.005, 0.145
+design
+channel, 5, cpt, 3, y, 0.005, 0.195  

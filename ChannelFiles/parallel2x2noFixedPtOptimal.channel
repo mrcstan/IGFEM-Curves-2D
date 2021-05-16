@@ -1,0 +1,162 @@
+number of channels, 12
+
+end point number and temperature, 1
+1 27
+
+model, mean temperature
+mass in, 1, 0.0005
+heat capacity, 3494
+viscosity, 3.405e-06
+density, 1065
+pressure out, 9, 0
+cross section, square 
+
+diameters 
+0.0005
+0.0005
+0.0005
+0.0005
+0.0005
+0.0005
+0.0005
+0.0005
+0.0005
+0.0005
+0.0005
+0.0005
+
+nurbs control points
+0 0.045
+0.048745 0.0435107
+nurbs knot vector
+0 0 1 1 
+connectivity
+1 2
+
+nurbs control points
+0.048745 0.0435107
+0.0486764 0.0347933
+nurbs knot vector
+0 0 1 1 
+connectivity
+2 3
+
+nurbs control points
+0.0486764 0.0347933
+0.0308857 0.0248448
+0.0481664 0.0170014
+nurbs knot vector
+0 0 0.5 1 1 
+connectivity
+3 6
+
+nurbs control points
+0.048745 0.0435107
+0.00267538 0.0333765
+nurbs knot vector
+0 0 1 1 
+connectivity
+2 4
+
+nurbs control points
+0.0486764 0.0347933
+0.00340991 0.026042
+nurbs knot vector
+0 0 1 1 
+connectivity
+3 5
+
+nurbs control points
+0.00267538 0.0333765
+0.00340991 0.026042
+nurbs knot vector
+0 0 1 1 
+connectivity
+4 5
+
+nurbs control points
+0.00340991 0.026042
+0.0481664 0.0170014
+nurbs knot vector
+0 0 1 1 
+connectivity
+5 6
+
+nurbs control points
+0.00267538 0.0333765
+0.00125 0.0151752
+0.0234488 0.0171997
+nurbs knot vector
+0 0 0.5 1 1 
+connectivity
+4 7
+
+nurbs control points
+0.00340991 0.026042
+0.0234488 0.0171997
+nurbs knot vector
+0 0 1 1 
+connectivity
+5 7
+
+nurbs control points
+0.0481664 0.0170014
+0.001255 0.00546224
+nurbs knot vector
+0 0 1 1 
+connectivity
+6 8
+
+nurbs control points
+0.0234488 0.0171997
+0.001255 0.00546224
+nurbs knot vector
+0 0 1 1 
+connectivity
+7 8
+
+nurbs control points
+0.001255 0.00546224
+0.05 0.005
+nurbs knot vector
+0 0 1 1 
+connectivity
+8 9
+
+number of design variables, 18 
+design, 1 
+channel, 2, cpt, 1, x, 0.00125, 0.04875 
+design, 2 
+channel, 2, cpt, 1, y, 0.00125, 0.04875 
+design, 3 
+channel, 3, cpt, 1, x, 0.00125, 0.04875 
+design, 4 
+channel, 3, cpt, 1, y, 0.00125, 0.04875 
+design, 5 
+channel, 3, cpt, 2, x, 0.00125, 0.04875 
+design, 6 
+channel, 3, cpt, 2, y, 0.00125, 0.04875 
+design, 7 
+channel, 6, cpt, 1, x, 0.00125, 0.04875 
+design, 8 
+channel, 6, cpt, 1, y, 0.00125, 0.04875 
+design, 9 
+channel, 7, cpt, 1, x, 0.00125, 0.04875 
+design, 10 
+channel, 7, cpt, 1, y, 0.00125, 0.04875 
+design, 11 
+channel, 10, cpt, 1, x, 0.00125, 0.04875 
+design, 12 
+channel, 10, cpt, 1, y, 0.00125, 0.04875 
+design, 13 
+channel, 8, cpt, 2, x, 0.00125, 0.04875 
+design, 14 
+channel, 8, cpt, 2, y, 0.00125, 0.04875 
+design, 15 
+channel, 11, cpt, 1, x, 0.00125, 0.04875 
+design, 16 
+channel, 11, cpt, 1, y, 0.00125, 0.04875 
+design, 17 
+channel, 12, cpt, 1, x, 0.00125, 0.04875 
+design, 18 
+channel, 12, cpt, 1, y, 0.00125, 0.04875 

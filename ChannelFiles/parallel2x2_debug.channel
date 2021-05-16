@@ -1,0 +1,156 @@
+number of channels, 12
+
+end point number and temperature, 1
+1 27
+
+model, mean temperature
+mass in, 1, 0.0005
+# powerXdensity, , 
+heat capacity, 3494
+viscosity, 3.405e-06
+viscosity model, 1
+density, 1065
+pressure out, 9, 0
+cross section, square 
+
+diameters 
+0.0005
+0.0005
+0.0005
+0.0005
+0.0005
+0.0005
+0.0005
+0.0005
+0.0005
+0.0005
+0.0005
+0.0005
+
+nurbs control points
+0 0.045
+0.005 0.045
+nurbs knot vector
+0 0 1 1 
+connectivity
+1 2
+
+nurbs control points
+0.005 0.045
+0.0292082 0.0393591
+nurbs knot vector
+0 0 1 1 
+connectivity
+2 3
+
+nurbs control points
+0.0292082 0.0393591
+0.0451533 0.0425325
+0.0365315 0.0296024
+nurbs knot vector
+0 0 0.5 1 1 
+connectivity
+3 6
+
+nurbs control points
+0.005 0.045
+0.013964 0.03003
+nurbs knot vector
+0 0 1 1 
+connectivity
+2 4
+
+nurbs control points
+0.0292082 0.0393591
+0.0266473 0.0312437
+nurbs knot vector
+0 0 1 1 
+connectivity
+3 5
+
+nurbs control points
+0.013964 0.03003
+0.0266473 0.0312437
+nurbs knot vector
+0 0 1 1 
+connectivity
+4 5
+
+nurbs control points
+0.0266473 0.0312437
+0.0365315 0.0296024
+nurbs knot vector
+0 0 1 1 
+connectivity
+5 6
+
+nurbs control points
+0.013964 0.03003
+0.00789223 0.0153119
+0.019649 0.00209167
+nurbs knot vector
+0 0 0.5 1 1 
+connectivity
+4 7
+
+nurbs control points
+0.0266473 0.0312437
+0.019649 0.00209167
+nurbs knot vector
+0 0 1 1 
+connectivity
+5 7
+
+nurbs control points
+0.0365315 0.0296024
+0.045 0.005
+nurbs knot vector
+0 0 1 1 
+connectivity
+6 8
+
+nurbs control points
+0.019649 0.00209167
+0.045 0.005
+nurbs knot vector
+0 0 1 1 
+connectivity
+7 8
+
+nurbs control points
+0.045 0.005
+0.05 0.005
+nurbs knot vector
+0 0 1 1 
+connectivity
+8 9
+
+number of design variables, 14 
+design
+channel, 3, cpt, 1, x, 0.00125, 0.04875 
+design
+channel, 3, cpt, 1, y, 0.00125, 0.04875 
+design
+channel, 3, cpt, 2, x, 0.00125, 0.04875 
+design
+channel, 3, cpt, 2, y, 0.00125, 0.04875 
+design
+channel, 6, cpt, 1, x, 0.00125, 0.04875 
+design
+channel, 6, cpt, 1, y, 0.00125, 0.04875 
+design
+channel, 7, cpt, 1, x, 0.00125, 0.04875 
+design
+channel, 7, cpt, 1, y, 0.00125, 0.04875 
+design
+channel, 10, cpt, 1, x, 0.00125, 0.04875 
+design
+channel, 10, cpt, 1, y, 0.00125, 0.04875 
+design
+channel, 8, cpt, 2, x, 0.00125, 0.04875 
+design
+channel, 8, cpt, 2, y, 0.00125, 0.04875 
+design
+channel, 11, cpt, 1, x, 0.00125, 0.04875 
+design
+channel, 11, cpt, 1, y, 0.00125, 0.04875 

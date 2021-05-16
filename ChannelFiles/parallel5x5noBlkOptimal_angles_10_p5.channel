@@ -1,0 +1,696 @@
+number of channels, 60
+
+end point number and temperature, 1
+1 27
+
+model, mean temperature
+mass in, 1, 0.0005
+# powerXdensity, 1, 
+heat capacity, 3494
+viscosity, 3.405e-06
+viscosity model, 1
+density, 1065
+pressure out, 36, 0
+cross section, square 
+
+diameters 
+0.0005
+0.0005
+0.0005
+0.0005
+0.0005
+0.0005
+0.0005
+0.0005
+0.0005
+0.0005
+0.0005
+0.0005
+0.0005
+0.0005
+0.0005
+0.0005
+0.0005
+0.0005
+0.0005
+0.0005
+0.0005
+0.0005
+0.0005
+0.0005
+0.0005
+0.0005
+0.0005
+0.0005
+0.0005
+0.0005
+0.0005
+0.0005
+0.0005
+0.0005
+0.0005
+0.0005
+0.0005
+0.0005
+0.0005
+0.0005
+0.0005
+0.0005
+0.0005
+0.0005
+0.0005
+0.0005
+0.0005
+0.0005
+0.0005
+0.0005
+0.0005
+0.0005
+0.0005
+0.0005
+0.0005
+0.0005
+0.0005
+0.0005
+0.0005
+0.0005
+
+nurbs control points
+0 0.045
+0.005 0.045
+nurbs knot vector
+0 0 1 1 
+connectivity
+1 2
+
+nurbs control points
+0.005 0.045
+0.00803808 0.0476221
+nurbs knot vector
+0 0 1 1 
+connectivity
+2 3
+
+nurbs control points
+0.00803808 0.0476221
+0.0390561 0.0487457
+nurbs knot vector
+0 0 1 1 
+connectivity
+3 4
+
+nurbs control points
+0.0390561 0.0487457
+0.0386376 0.0414839
+nurbs knot vector
+0 0 1 1 
+connectivity
+4 5
+
+nurbs control points
+0.0386376 0.0414839
+0.0453946 0.0487457
+nurbs knot vector
+0 0 1 1 
+connectivity
+5 6
+
+nurbs control points
+0.0453946 0.0487457
+0.0482577 0.0485076
+0.0481335 0.014152
+nurbs knot vector
+0 0 0.5 1 1 
+connectivity
+6 12
+
+nurbs control points
+0.005 0.045
+0.00274659 0.0349076
+nurbs knot vector
+0 0 1 1 
+connectivity
+2 7
+
+nurbs control points
+0.00803808 0.0476221
+0.0165994 0.0420994
+nurbs knot vector
+0 0 1 1 
+connectivity
+3 8
+
+nurbs control points
+0.0390561 0.0487457
+0.0339721 0.0440551
+nurbs knot vector
+0 0 1 1 
+connectivity
+4 9
+
+nurbs control points
+0.0386376 0.0414839
+0.0340747 0.0251446
+nurbs knot vector
+0 0 1 1 
+connectivity
+5 10
+
+nurbs control points
+0.0453946 0.0487457
+0.0428953 0.033796
+nurbs knot vector
+0 0 1 1 
+connectivity
+6 11
+
+nurbs control points
+0.00274659 0.0349076
+0.0165994 0.0420994
+nurbs knot vector
+0 0 1 1 
+connectivity
+7 8
+
+nurbs control points
+0.0165994 0.0420994
+0.0339721 0.0440551
+nurbs knot vector
+0 0 1 1 
+connectivity
+8 9
+
+nurbs control points
+0.0339721 0.0440551
+0.0340747 0.0251446
+nurbs knot vector
+0 0 1 1 
+connectivity
+9 10
+
+nurbs control points
+0.0340747 0.0251446
+0.0428953 0.033796
+nurbs knot vector
+0 0 1 1 
+connectivity
+10 11
+
+nurbs control points
+0.0428953 0.033796
+0.0481335 0.014152
+nurbs knot vector
+0 0 1 1 
+connectivity
+11 12
+
+nurbs control points
+0.00274659 0.0349076
+0.00206057 0.0259033
+nurbs knot vector
+0 0 1 1 
+connectivity
+7 13
+
+nurbs control points
+0.0165994 0.0420994
+0.0117456 0.0333228
+nurbs knot vector
+0 0 1 1 
+connectivity
+8 14
+
+nurbs control points
+0.0339721 0.0440551
+0.0287076 0.038113
+nurbs knot vector
+0 0 1 1 
+connectivity
+9 15
+
+nurbs control points
+0.0340747 0.0251446
+0.029546 0.0151033
+nurbs knot vector
+0 0 1 1 
+connectivity
+10 16
+
+nurbs control points
+0.0428953 0.033796
+0.0398718 0.0202238
+nurbs knot vector
+0 0 1 1 
+connectivity
+11 17
+
+nurbs control points
+0.0481335 0.014152
+0.0479077 0.01146
+nurbs knot vector
+0 0 1 1 
+connectivity
+12 18
+
+nurbs control points
+0.00206057 0.0259033
+0.0117456 0.0333228
+nurbs knot vector
+0 0 1 1 
+connectivity
+13 14
+
+nurbs control points
+0.0117456 0.0333228
+0.0287076 0.038113
+nurbs knot vector
+0 0 1 1 
+connectivity
+14 15
+
+nurbs control points
+0.0287076 0.038113
+0.029546 0.0151033
+nurbs knot vector
+0 0 1 1 
+connectivity
+15 16
+
+nurbs control points
+0.029546 0.0151033
+0.0398718 0.0202238
+nurbs knot vector
+0 0 1 1 
+connectivity
+16 17
+
+nurbs control points
+0.0398718 0.0202238
+0.0479077 0.01146
+nurbs knot vector
+0 0 1 1 
+connectivity
+17 18
+
+nurbs control points
+0.00206057 0.0259033
+0.00210706 0.0184389
+nurbs knot vector
+0 0 1 1 
+connectivity
+13 19
+
+nurbs control points
+0.0117456 0.0333228
+0.0109311 0.0249996
+nurbs knot vector
+0 0 1 1 
+connectivity
+14 20
+
+nurbs control points
+0.0287076 0.038113
+0.0241226 0.0315455
+nurbs knot vector
+0 0 1 1 
+connectivity
+15 21
+
+nurbs control points
+0.029546 0.0151033
+0.0253011 0.00948981
+nurbs knot vector
+0 0 1 1 
+connectivity
+16 22
+
+nurbs control points
+0.0398718 0.0202238
+0.0386208 0.012336
+nurbs knot vector
+0 0 1 1 
+connectivity
+17 23
+
+nurbs control points
+0.0479077 0.01146
+0.0479012 0.00908091
+nurbs knot vector
+0 0 1 1 
+connectivity
+18 24
+
+nurbs control points
+0.00210706 0.0184389
+0.0109311 0.0249996
+nurbs knot vector
+0 0 1 1 
+connectivity
+19 20
+
+nurbs control points
+0.0109311 0.0249996
+0.0241226 0.0315455
+nurbs knot vector
+0 0 1 1 
+connectivity
+20 21
+
+nurbs control points
+0.0241226 0.0315455
+0.0253011 0.00948981
+nurbs knot vector
+0 0 1 1 
+connectivity
+21 22
+
+nurbs control points
+0.0253011 0.00948981
+0.0386208 0.012336
+nurbs knot vector
+0 0 1 1 
+connectivity
+22 23
+
+nurbs control points
+0.0386208 0.012336
+0.0479012 0.00908091
+nurbs knot vector
+0 0 1 1 
+connectivity
+23 24
+
+nurbs control points
+0.00210706 0.0184389
+0.00364322 0.00928721
+nurbs knot vector
+0 0 1 1 
+connectivity
+19 25
+
+nurbs control points
+0.0109311 0.0249996
+0.0104027 0.0150037
+nurbs knot vector
+0 0 1 1 
+connectivity
+20 26
+
+nurbs control points
+0.0241226 0.0315455
+0.0202626 0.0233703
+nurbs knot vector
+0 0 1 1 
+connectivity
+21 27
+
+nurbs control points
+0.0253011 0.00948981
+0.0194991 0.00458266
+nurbs knot vector
+0 0 1 1 
+connectivity
+22 28
+
+nurbs control points
+0.0386208 0.012336
+0.0303882 0.00601642
+nurbs knot vector
+0 0 1 1 
+connectivity
+23 29
+
+nurbs control points
+0.0479012 0.00908091
+0.0400633 0.00600283
+nurbs knot vector
+0 0 1 1 
+connectivity
+24 30
+
+nurbs control points
+0.00364322 0.00928721
+0.0104027 0.0150037
+nurbs knot vector
+0 0 1 1 
+connectivity
+25 26
+
+nurbs control points
+0.0104027 0.0150037
+0.0202626 0.0233703
+nurbs knot vector
+0 0 1 1 
+connectivity
+26 27
+
+nurbs control points
+0.0202626 0.0233703
+0.0194991 0.00458266
+nurbs knot vector
+0 0 1 1 
+connectivity
+27 28
+
+nurbs control points
+0.0194991 0.00458266
+0.0303882 0.00601642
+nurbs knot vector
+0 0 1 1 
+connectivity
+28 29
+
+nurbs control points
+0.0303882 0.00601642
+0.0400633 0.00600283
+nurbs knot vector
+0 0 1 1 
+connectivity
+29 30
+
+nurbs control points
+0.00364322 0.00928721
+0.00131792 0.00154907
+0.00934945 0.00193501
+nurbs knot vector
+0 0 0.5 1 1 
+connectivity
+25 31
+
+nurbs control points
+0.0104027 0.0150037
+0.00934945 0.00193501
+nurbs knot vector
+0 0 1 1 
+connectivity
+26 31
+
+nurbs control points
+0.0202626 0.0233703
+0.0163333 0.0104984
+nurbs knot vector
+0 0 1 1 
+connectivity
+27 32
+
+nurbs control points
+0.0194991 0.00458266
+0.0154532 0.00129914
+nurbs knot vector
+0 0 1 1 
+connectivity
+28 33
+
+nurbs control points
+0.0303882 0.00601642
+0.0487448 0.00125341
+nurbs knot vector
+0 0 1 1 
+connectivity
+29 34
+
+nurbs control points
+0.0400633 0.00600283
+0.045 0.005
+nurbs knot vector
+0 0 1 1 
+connectivity
+30 35
+
+nurbs control points
+0.00934945 0.00193501
+0.0163333 0.0104984
+nurbs knot vector
+0 0 1 1 
+connectivity
+31 32
+
+nurbs control points
+0.0163333 0.0104984
+0.0154532 0.00129914
+nurbs knot vector
+0 0 1 1 
+connectivity
+32 33
+
+nurbs control points
+0.0154532 0.00129914
+0.0487448 0.00125341
+nurbs knot vector
+0 0 1 1 
+connectivity
+33 34
+
+nurbs control points
+0.0487448 0.00125341
+0.045 0.005
+nurbs knot vector
+0 0 1 1 
+connectivity
+34 35
+
+nurbs control points
+0.045 0.005
+0.05 0.005
+nurbs knot vector
+0 0 1 1 
+connectivity
+35 36
+
+number of design variables, 68 
+design
+channel, 3, cpt, 1, x, 0.00125, 0.04875 
+design
+channel, 3, cpt, 1, y, 0.00125, 0.04875 
+design
+channel, 4, cpt, 1, x, 0.00125, 0.04875 
+design
+channel, 4, cpt, 1, y, 0.00125, 0.04875 
+design
+channel, 5, cpt, 1, x, 0.00125, 0.04875 
+design
+channel, 5, cpt, 1, y, 0.00125, 0.04875 
+design
+channel, 6, cpt, 1, x, 0.00125, 0.04875 
+design
+channel, 6, cpt, 1, y, 0.00125, 0.04875 
+design
+channel, 6, cpt, 2, x, 0.00125, 0.04875 
+design
+channel, 6, cpt, 2, y, 0.00125, 0.04875 
+design
+channel, 12, cpt, 1, x, 0.00125, 0.04875 
+design
+channel, 12, cpt, 1, y, 0.00125, 0.04875 
+design
+channel, 13, cpt, 1, x, 0.00125, 0.04875 
+design
+channel, 13, cpt, 1, y, 0.00125, 0.04875 
+design
+channel, 14, cpt, 1, x, 0.00125, 0.04875 
+design
+channel, 14, cpt, 1, y, 0.00125, 0.04875 
+design
+channel, 15, cpt, 1, x, 0.00125, 0.04875 
+design
+channel, 15, cpt, 1, y, 0.00125, 0.04875 
+design
+channel, 16, cpt, 1, x, 0.00125, 0.04875 
+design
+channel, 16, cpt, 1, y, 0.00125, 0.04875 
+design
+channel, 22, cpt, 1, x, 0.00125, 0.04875 
+design
+channel, 22, cpt, 1, y, 0.00125, 0.04875 
+design
+channel, 23, cpt, 1, x, 0.00125, 0.04875 
+design
+channel, 23, cpt, 1, y, 0.00125, 0.04875 
+design
+channel, 24, cpt, 1, x, 0.00125, 0.04875 
+design
+channel, 24, cpt, 1, y, 0.00125, 0.04875 
+design
+channel, 25, cpt, 1, x, 0.00125, 0.04875 
+design
+channel, 25, cpt, 1, y, 0.00125, 0.04875 
+design
+channel, 26, cpt, 1, x, 0.00125, 0.04875 
+design
+channel, 26, cpt, 1, y, 0.00125, 0.04875 
+design
+channel, 27, cpt, 1, x, 0.00125, 0.04875 
+design
+channel, 27, cpt, 1, y, 0.00125, 0.04875 
+design
+channel, 33, cpt, 1, x, 0.00125, 0.04875 
+design
+channel, 33, cpt, 1, y, 0.00125, 0.04875 
+design
+channel, 34, cpt, 1, x, 0.00125, 0.04875 
+design
+channel, 34, cpt, 1, y, 0.00125, 0.04875 
+design
+channel, 35, cpt, 1, x, 0.00125, 0.04875 
+design
+channel, 35, cpt, 1, y, 0.00125, 0.04875 
+design
+channel, 36, cpt, 1, x, 0.00125, 0.04875 
+design
+channel, 36, cpt, 1, y, 0.00125, 0.04875 
+design
+channel, 37, cpt, 1, x, 0.00125, 0.04875 
+design
+channel, 37, cpt, 1, y, 0.00125, 0.04875 
+design
+channel, 38, cpt, 1, x, 0.00125, 0.04875 
+design
+channel, 38, cpt, 1, y, 0.00125, 0.04875 
+design
+channel, 44, cpt, 1, x, 0.00125, 0.04875 
+design
+channel, 44, cpt, 1, y, 0.00125, 0.04875 
+design
+channel, 45, cpt, 1, x, 0.00125, 0.04875 
+design
+channel, 45, cpt, 1, y, 0.00125, 0.04875 
+design
+channel, 46, cpt, 1, x, 0.00125, 0.04875 
+design
+channel, 46, cpt, 1, y, 0.00125, 0.04875 
+design
+channel, 47, cpt, 1, x, 0.00125, 0.04875 
+design
+channel, 47, cpt, 1, y, 0.00125, 0.04875 
+design
+channel, 48, cpt, 1, x, 0.00125, 0.04875 
+design
+channel, 48, cpt, 1, y, 0.00125, 0.04875 
+design
+channel, 49, cpt, 1, x, 0.00125, 0.04875 
+design
+channel, 49, cpt, 1, y, 0.00125, 0.04875 
+design
+channel, 55, cpt, 1, x, 0.00125, 0.04875 
+design
+channel, 55, cpt, 1, y, 0.00125, 0.04875 
+design
+channel, 50, cpt, 2, x, 0.00125, 0.04875 
+design
+channel, 50, cpt, 2, y, 0.00125, 0.04875 
+design
+channel, 56, cpt, 1, x, 0.00125, 0.04875 
+design
+channel, 56, cpt, 1, y, 0.00125, 0.04875 
+design
+channel, 57, cpt, 1, x, 0.00125, 0.04875 
+design
+channel, 57, cpt, 1, y, 0.00125, 0.04875 
+design
+channel, 58, cpt, 1, x, 0.00125, 0.04875 
+design
+channel, 58, cpt, 1, y, 0.00125, 0.04875 
+design
+channel, 59, cpt, 1, x, 0.00125, 0.04875 
+design
+channel, 59, cpt, 1, y, 0.00125, 0.04875 

@@ -1,0 +1,23 @@
+# -*- coding: mbcs -*-
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['Model-1'].rootAssembly.regenerate()
+del mdb.models['Model-1'].boundaryConditions['boundary_temp']
+mdb.models['Model-1'].rootAssembly.Set(edges=
+    mdb.models['Model-1'].rootAssembly.instances['Part-1-1'].edges.getSequenceFromMask(
+    ('[#78 ]', ), ), name='all_bound2')
+mdb.models['Model-1'].TemperatureBC(amplitude=UNSET, createStepName=
+    'heat transfer', distributionType=UNIFORM, fieldName='', fixed=OFF, 
+    magnitude=0.0, name='bound_temp', region=
+    mdb.models['Model-1'].rootAssembly.sets['all_bound2'])

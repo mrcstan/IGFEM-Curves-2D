@@ -1,0 +1,25 @@
+channel end points, 2, 2
+0 0.1
+0.1 0.09
+channel connectivity, 1
+1 2
+mcf, 1
+1.747
+end point number and temperature, 1
+1 21.5
+model, mean temperature
+mass in, 1, 5e-4
+heat capacity, 3494
+viscosity, 3.405e-6
+pressure out, 2, 0
+diameters, 1
+7.5e-4
+nurbs control points, 1, 2, 6
+0	0.0100000000000000
+0.0999812256045221	0.00496289785488824
+0.0497554434077493	0.0488927960800881
+0.0200946908656795	0.0476291666915558
+0.0201606835999123	0.0815447844616246
+0.100000000000000	0.0900000000000000
+nurbs knot vector, 1, 9
+0 0 0 1 2 3 4 4 4

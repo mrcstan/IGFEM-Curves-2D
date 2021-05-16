@@ -1,0 +1,25 @@
+ this is the title for the first example
+ 1                    ! numat
+1  0.6   0.6   0.6   ! mat #, akx, aky, Q (NA) 
+ 3 1                     ! numipt (NA), numgpt (NA)
+ .333333333 .333333333   ! gradient point location (NA)
+3                     ! nnopel
+pqeVAa
+ 4                        ! number of corners
+   1       0.00000       0.00000  11
+   2       0.10000       0.00000  11
+   3       0.10000       0.05000  1
+   4       0.00000       0.05000  1
+ 4                        ! number of boundary segments
+ 1 1 2 11
+ 2 2 3 12
+ 3 3 4 1
+ 4 4 1 12
+ 0                        ! number of holes
+ 2                        ! number of regions
+  1       0.05     0.04    1      1.35e-5 ! any interior point in the region, first index: index region, second last index: material 
+  2       0.05     0.01    1      1.35e-5 ! any interior point in the region
+   3                      ! num_boun_val
+   1         20.0         ! boundary condition
+  11         2000.0       ! boundary condition
+  12          0.0       ! boundary condition

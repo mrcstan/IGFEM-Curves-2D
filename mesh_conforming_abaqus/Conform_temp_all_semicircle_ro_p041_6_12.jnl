@@ -1,0 +1,75 @@
+# Save by marcustan on 2013_11_15-14.42.33; build 6.13-2 2013_07_18-06.22.41 126428
+from abaqus import *
+upgradeMdb(
+    'C:/Users/marcustan/Dropbox/IGFEM-Curves/ConformingMeshAbaqus/Conform_temp_all_semicircle_ro_p041_6_10-6.10-1.cae'
+    , 
+    'C:/Users/marcustan/Dropbox/IGFEM-Curves/ConformingMeshAbaqus/Conform_temp_all_semicircle_ro_p041_6_10.cae')
+# Save by marcustan on 2013_11_15-14.42.33; build 6.13-2 2013_07_18-06.22.41 126428
+# Save by marcustan on 2013_11_15-15.18.17; build 6.13-2 2013_07_18-06.22.41 126428
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['Model-1'].parts['Part-1'].deleteMesh()
+mdb.models['Model-1'].parts['Part-1'].seedPart(deviationFactor=0.1, 
+    minSizeFactor=0.1, size=0.01)
+mdb.models['Model-1'].parts['Part-1'].generateMesh()
+# Save by marcustan on 2013_11_15-15.31.38; build 6.13-2 2013_07_18-06.22.41 126428
+# Save by marcustan on 2013_11_15-15.31.38; build 6.13-2 2013_07_18-06.22.41 126428
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.jobs.changeKey(fromName='temp_all_semicircle_ro_p041_40k_elems', toName=
+    'temp_all_semicircle_ro_p041_112_elems')
+mdb.models['Model-1'].parts['Part-1'].deleteMesh()
+mdb.models['Model-1'].parts['Part-1'].seedPart(deviationFactor=0.1, 
+    minSizeFactor=0.1, size=0.005)
+mdb.models['Model-1'].parts['Part-1'].generateMesh()
+mdb.jobs.changeKey(fromName='temp_all_semicircle_ro_p041_112_elems', toName=
+    'temp_all_semicircle_ro_p041_460_elems')
+mdb.models['Model-1'].parts['Part-1'].deleteMesh()
+mdb.models['Model-1'].parts['Part-1'].seedPart(deviationFactor=0.1, 
+    minSizeFactor=0.1, size=0.0025)
+mdb.models['Model-1'].parts['Part-1'].generateMesh()
+mdb.jobs.changeKey(fromName='temp_all_semicircle_ro_p041_460_elems', toName=
+    'temp_all_semicircle_ro_p041_1887_elems')
+# Save by marcustan on 2013_11_15-18.36.35; build 6.13-2 2013_07_18-06.22.41 126428
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['Model-1'].parts['Part-1'].deleteMesh()
+mdb.models['Model-1'].parts['Part-1'].seedPart(deviationFactor=0.1, 
+    minSizeFactor=0.1, size=0.00125)
+mdb.models['Model-1'].parts['Part-1'].generateMesh()
+mdb.jobs.changeKey(fromName='temp_all_semicircle_ro_p041_1887_elems', toName=
+    'temp_all_semicircle_ro_p041_6704_elems')
+# Save by marcustan on 2013_11_15-21.34.27; build 6.13-2 2013_07_18-06.22.41 126428

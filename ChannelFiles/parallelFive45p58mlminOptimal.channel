@@ -1,0 +1,212 @@
+number of channels, 16
+
+end point number and temperature, 1
+1 27
+
+model, mean temperature
+mass in, 1, 0.000809045
+# powerXdensity, 1, 
+heat capacity, 3494
+viscosity, 2.344e-06
+viscosity model, 0
+density, 1065
+pressure out, 12, 0
+cross section, square 
+
+diameters 
+0.00075
+0.00075
+0.00075
+0.00075
+0.00075
+0.00075
+0.00075
+0.00075
+0.00075
+0.00075
+0.00075
+0.00075
+0.00075
+0.00075
+0.00075
+0.00075
+
+nurbs control points
+0 0.19
+0.11234 0.193127
+nurbs knot vector
+0 0 1 1 
+connectivity
+1 2
+
+nurbs control points
+0.11234 0.193127
+0.110428 0.182628
+nurbs knot vector
+0 0 1 1 
+connectivity
+2 3
+
+nurbs control points
+0.110428 0.182628
+0.0929764 0.17904
+nurbs knot vector
+0 0 1 1 
+connectivity
+3 5
+
+nurbs control points
+0.0929764 0.17904
+0.0676032 0.174435
+nurbs knot vector
+0 0 1 1 
+connectivity
+5 7
+
+nurbs control points
+0.0676032 0.174435
+0.0430922 0.173044
+nurbs knot vector
+0 0 1 1 
+connectivity
+7 9
+
+nurbs control points
+0.11234 0.193127
+0.14442 0.194999
+0.134748 0.0268297
+nurbs knot vector
+0 0 0.5 1 1 
+connectivity
+2 4
+
+nurbs control points
+0.110428 0.182628
+0.134748 0.0268297
+nurbs knot vector
+0 0 1 1 
+connectivity
+3 4
+
+nurbs control points
+0.0929764 0.17904
+0.100776 0.0229125
+nurbs knot vector
+0 0 1 1 
+connectivity
+5 6
+
+nurbs control points
+0.0676032 0.174435
+0.0717941 0.0216941
+nurbs knot vector
+0 0 1 1 
+connectivity
+7 8
+
+nurbs control points
+0.0430922 0.173044
+0.0428951 0.0207582
+nurbs knot vector
+0 0 1 1 
+connectivity
+9 10
+
+nurbs control points
+0.0430922 0.173044
+0.01433 0.168858
+0.0132943 0.00532065
+nurbs knot vector
+0 0 0.5 1 1 
+connectivity
+9 11
+
+nurbs control points
+0.134748 0.0268297
+0.100776 0.0229125
+nurbs knot vector
+0 0 1 1 
+connectivity
+4 6
+
+nurbs control points
+0.100776 0.0229125
+0.0717941 0.0216941
+nurbs knot vector
+0 0 1 1 
+connectivity
+6 8
+
+nurbs control points
+0.0717941 0.0216941
+0.0428951 0.0207582
+nurbs knot vector
+0 0 1 1 
+connectivity
+8 10
+
+nurbs control points
+0.0428951 0.0207582
+0.0132943 0.00532065
+nurbs knot vector
+0 0 1 1 
+connectivity
+10 11
+
+nurbs control points
+0.0132943 0.00532065
+0.15 0.01
+nurbs knot vector
+0 0 1 1 
+connectivity
+11 12
+
+number of design variables, 24 
+design
+channel, 2, cpt, 1, x, 0.005, 0.145 
+design
+channel, 2, cpt, 1, y, 0.005, 0.195 
+design
+channel, 6, cpt, 2, x, 0.005, 0.145 
+design
+channel, 6, cpt, 2, y, 0.005, 0.195 
+design
+channel, 3, cpt, 1, x, 0.005, 0.145 
+design
+channel, 3, cpt, 1, y, 0.005, 0.195 
+design
+channel, 12, cpt, 1, x, 0.005, 0.145 
+design
+channel, 12, cpt, 1, y, 0.005, 0.195 
+design
+channel, 4, cpt, 1, x, 0.005, 0.145 
+design
+channel, 4, cpt, 1, y, 0.005, 0.195 
+design
+channel, 13, cpt, 1, x, 0.005, 0.145 
+design
+channel, 13, cpt, 1, y, 0.005, 0.195 
+design
+channel, 5, cpt, 1, x, 0.005, 0.145 
+design
+channel, 5, cpt, 1, y, 0.005, 0.195 
+design
+channel, 14, cpt, 1, x, 0.005, 0.145 
+design
+channel, 14, cpt, 1, y, 0.005, 0.195 
+design
+channel, 10, cpt, 1, x, 0.005, 0.145 
+design
+channel, 10, cpt, 1, y, 0.005, 0.195 
+design
+channel, 15, cpt, 1, x, 0.005, 0.145 
+design
+channel, 15, cpt, 1, y, 0.005, 0.195 
+design
+channel, 11, cpt, 2, x, 0.005, 0.145 
+design
+channel, 11, cpt, 2, y, 0.005, 0.195 
+design
+channel, 16, cpt, 1, x, 0.005, 0.145 
+design
+channel, 16, cpt, 1, y, 0.005, 0.195 

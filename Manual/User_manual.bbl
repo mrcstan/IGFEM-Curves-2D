@@ -1,0 +1,30 @@
+\begin{thebibliography}{3}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Soghrati et~al.(2012)Soghrati, Arag{\'{o}}n, Duarte, and
+  Geubelle]{Soghrati12_2D}
+Soheil Soghrati, Alejandro~M. Arag{\'{o}}n, C.~A. Duarte, and Philippe~H.
+  Geubelle.
+\newblock An interface-enriched generalized {FEM} for problems with
+  discontinuous gradient fields.
+\newblock \emph{Int. J. Numer. Methods Eng.}, 89:\penalty0 991--1008, 2012.
+
+\bibitem[Tan et~al.(2015)Tan, Safdari, Najafi, and Geubelle]{Tan15}
+Marcus H.~Y. Tan, Masoud Safdari, Ahmad~R. Najafi, and Philippe~H. Geubelle.
+\newblock A {NURBS}-based interface-enriched generalized finite element scheme
+  for the thermal analysis and design of microvascular composites.
+\newblock \emph{Comput. Methods Appl. Mech. Eng.}, 283:\penalty0 1382--1400,
+  2015.
+
+\bibitem[Tan et~al.(2016)Tan, Najafi, Pety, White, and Geubelle]{Tan16}
+Marcus Hwai~Yik Tan, Ahmad~R. Najafi, Stephen~J. Pety, Scott~R. White, and
+  Philippe~H. Geubelle.
+\newblock Gradient-based design of actively-cooled microvascular composite
+  panels.
+\newblock \emph{In preparation for Int J Heat Mass Transfer}, 2016.
+
+\end{thebibliography}
